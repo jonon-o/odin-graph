@@ -1,3 +1,6 @@
+import { type SVGProps, useEffect, useRef } from 'react';
+import svgPanZoom from 'svg-pan-zoom';
+
 interface Props {
 	filter: string | null;
 }
@@ -6,16 +9,33 @@ type FilterValueType = 'Natural disasters' | 'Inflation' | 'Crises' | 'Geopoliti
 
 const Chart = ({ filter }: Props) => {
 
-	const getClassName = (type: FilterValueType): string | undefined => {
+	const ref = useRef<SVGSVGElement | null>(null);
+
+	const getProps = (type: FilterValueType): Partial<SVGProps<SVGTextElement>> => {
 		if (!filter) {
-			return undefined;
+			return {  };
 		}
-		return type === filter ? 'selected' : undefined;
+		if (type === filter) {
+			return {
+				fill: '#39a636'
+			}
+		}
+		return {
+
+		}
 	}
 
+	useEffect(() => {
+		if (ref.current) {
+			svgPanZoom(ref.current, {
+				controlIconsEnabled: true
+			});
+		}
+	}, [])
+
 	return (
-		<svg width='900' height='900' viewBox='0 0 1580 1580' xmlns='http://www.w3.org/2000/svg' >
-			<rect width="1578" height="1578" x={1} y={1} stroke='black' strokeWidth={1} fill='none'/>
+		<svg ref={ref} width='900' height='900' viewBox='0 0 1580 1580' xmlns='http://www.w3.org/2000/svg' >
+			{/*<rect width="1578" height="1578" x={1} y={1} stroke='black' strokeWidth={1} fill='none'/>*/}
 			{/*Top Circle*/}
 			<g>
 				<circle cx='790' cy='260' r='250' stroke='black' strokeWidth='1' fill='none' />
@@ -61,281 +81,287 @@ const Chart = ({ filter }: Props) => {
 			<rect className='rotate' width={760} height={760} x={410} y={410} stroke='black' strokeWidth={3} fill='none'/>
 
 			<rect className='rotate' width={380} height={380} x={600} y={335} fill='red' fillOpacity={.5}/>
-			<rect className='rotate' width={380} height={380} x={335} y={600} fill='blue' fillOpacity={.5}/>
-			<rect className='rotate' width={380} height={380} x={865} y={600} fill='green' fillOpacity={.5}/>
+			<rect className='rotate' width={380} height={380} x={335} y={600} fill='#8282d8' fillOpacity={.5}/>
+			<rect className='rotate' width={380} height={380} x={865} y={600} fill='#8dce8d' fillOpacity={.5}/>
 			<rect className='rotate' width={380} height={380} x={600} y={865} fill='orange' fillOpacity={.5}/>
 			<line x1="250" y1="790" x2="1330" y2="790" stroke="black" strokeWidth={2}/>
 			<line x1="790" y1="250" x2="790" y2="1330" stroke="black" strokeWidth={2}/>
 
 			{/* State-Top-1 */}
 			<g>
-				<text textAnchor='end' x="788" y="290" fontSize={4} fontWeight={600}>Job quality</text>
-				<text textAnchor='end' x="788" y="295" fontSize={4} fontWeight={600}>degradation</text>
+				<text textAnchor='end' x="788" y="290" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Job quality</text>
+				<text textAnchor='end' x="788" y="295" fontSize={4} fontWeight={600} {...getProps('Inflation')}>degradation</text>
 			</g>
 			{/* State-Top-4 */}
 			<g>
-				<text x="670" y="400" fontSize={7} fontWeight={600}>Debt burden</text>
-				<text x="670" y="409" fontSize={7} fontWeight={600}>increase</text>
+				<text x="670" y="400" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Debt burden</text>
+				<text x="670" y="409" fontSize={7} fontWeight={600} {...getProps('Inflation')}>increase</text>
 			</g>
 			<g>
-				<text x="745" y="420" fontSize={7} fontWeight={600}>Industrial</text>
-				<text x="745" y="429" fontSize={7} fontWeight={600}>production</text>
-				<text x="745" y="438" fontSize={7} fontWeight={600}>decline</text>
+				<text x="745" y="420" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Industrial</text>
+				<text x="745" y="429" fontSize={7} fontWeight={600} {...getProps('Inflation')}>production</text>
+				<text x="745" y="438" fontSize={7} fontWeight={600} {...getProps('Inflation')}>decline</text>
 			</g>
 			{/* State-Top-5 */}
 
 			<g>
-				<text x="630" y="423" fontSize={7} fontWeight={600}>Unequal</text>
-				<text x="627" y="430" fontSize={7} fontWeight={600}>infrastructure</text>
-				<text x="627" y="437" fontSize={7} fontWeight={600}>development</text>
+				<text x="630" y="423" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Unequal</text>
+				<text x="627" y="430" fontSize={7} fontWeight={600} {...getProps('Inflation')}>infrastructure</text>
+				<text x="627" y="437" fontSize={7} fontWeight={600} {...getProps('Inflation')}>development</text>
 			</g>
 
 			<g>
-				<text x="670" y="447" fontSize={7} fontWeight={600}>Capital</text>
-				<text x="670" y="454" fontSize={7} fontWeight={600}>depreciation</text>
-				<text x="670" y="461" fontSize={7} fontWeight={600}>rate</text>
+				<text x="670" y="447" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Capital</text>
+				<text x="670" y="454" fontSize={7} fontWeight={600} {...getProps('Inflation')}>depreciation</text>
+				<text x="670" y="461" fontSize={7} fontWeight={600} {...getProps('Inflation')}>rate</text>
 			</g>
 
 			<g>
-				<text x="700" y="465" fontSize={7} fontWeight={600}>Slow Real</text>
-				<text x="700" y="472" fontSize={7} fontWeight={600}>State</text>
-				<text x="700" y="479" fontSize={7} fontWeight={600}>Market</text>
+				<text x="700" y="465" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Slow Real</text>
+				<text x="700" y="472" fontSize={7} fontWeight={600} {...getProps('Inflation')}>State</text>
+				<text x="700" y="479" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Market</text>
 			</g>
 
 			<g>
-				<text x="730" y="480" fontSize={7} fontWeight={600}>Boost</text>
-				<text x="730" y="489" fontSize={7} fontWeight={600}>Inflation</text>
+				<text x="730" y="480" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Boost</text>
+				<text x="730" y="489" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Inflation</text>
 			</g>
 
-			<g className={getClassName('Inflation')}>
-				<text x="755" y="470" fontSize={7} fontWeight={600}>Real wage</text>
-				<text x="755" y="477" fontSize={7} fontWeight={600}>decline</text>
+			<g
+
+			>
+				<text x="755" y="470" fontSize={7} fontWeight={600} {...getProps('Inflation')} >Real wage</text>
+				<text x="755" y="477" fontSize={7} fontWeight={600} {...getProps('Inflation')}>decline</text>
+			</g>
+
+			<g>
+				<text x="600" y="520" fontSize={8} fontWeight={600} {...getProps('Inflation')}>Political influence</text>
+				<text x="600" y="528" fontSize={8} fontWeight={600} {...getProps('Inflation')}>disproportionality</text>
 			</g>
 
 			{/* State-Center-5 */}
 			<g>
-				<text x="630" y="610" fontSize={6} fontWeight={600}>Research &</text>
-				<text x="630" y="616" fontSize={6} fontWeight={600}>development</text>
-				<text x="630" y="622" fontSize={6} fontWeight={600}>expenditure</text>
+				<text x="630" y="610" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Research &</text>
+				<text x="630" y="616" fontSize={6} fontWeight={600} {...getProps('Inflation')}>development</text>
+				<text x="630" y="622" fontSize={6} fontWeight={600} {...getProps('Inflation')}>expenditure</text>
 			</g>
 			<g>
-				<text x="655" y="590" fontSize={6} fontWeight={600}>Capital market</text>
-				<text x="655" y="596" fontSize={6} fontWeight={600}>development</text>
+				<text x="655" y="590" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Capital market</text>
+				<text x="655" y="596" fontSize={6} fontWeight={600} {...getProps('Inflation')}>development</text>
 			</g>
 			<g>
-				<text x="685" y="575" fontSize={6} fontWeight={600}>Mortgage</text>
-				<text x="685" y="581" fontSize={6} fontWeight={600}>rate</text>
+				<text x="685" y="575" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Mortgage</text>
+				<text x="685" y="581" fontSize={6} fontWeight={600} {...getProps('Inflation')}>rate</text>
 			</g>
 			<g>
-				<text x="715" y="560" fontSize={6} fontWeight={600}>Currency</text>
-				<text x="715" y="566" fontSize={6} fontWeight={600}>stability</text>
+				<text x="715" y="560" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Currency</text>
+				<text x="715" y="566" fontSize={6} fontWeight={600} {...getProps('Inflation')}>stability</text>
 			</g>
 			<g>
-				<text x="725" y="580" fontSize={6} fontWeight={600}>Central bank</text>
-				<text x="725" y="586" fontSize={6} fontWeight={600}>interest rate</text>
+				<text x="725" y="580" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Central bank</text>
+				<text x="725" y="586" fontSize={6} fontWeight={600} {...getProps('Inflation')}>interest rate</text>
 			</g>
 			<g>
-				<text x="755" y="555" fontSize={6} fontWeight={600}>Foreign</text>
-				<text x="755" y="561" fontSize={6} fontWeight={600}>direct</text>
-				<text x="755" y="567" fontSize={6} fontWeight={600}>investment</text>
+				<text x="755" y="555" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Foreign</text>
+				<text x="755" y="561" fontSize={6} fontWeight={600} {...getProps('Inflation')}>direct</text>
+				<text x="755" y="567" fontSize={6} fontWeight={600} {...getProps('Inflation')}>investment</text>
 			</g>
 			{/* State-Center-4 */}
 			<g>
-				<text x="670" y="647" fontSize={6} fontWeight={600}>Real GDP</text>
-				<text x="670" y="653" fontSize={6} fontWeight={600}>growth rate</text>
+				<text x="670" y="647" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Real GDP</text>
+				<text x="670" y="653" fontSize={6} fontWeight={600} {...getProps('Inflation')}>growth rate</text>
 			</g>
 			<g>
-				<text x="705" y="625" fontSize={6} fontWeight={600}>Industry</text>
-				<text x="705" y="631" fontSize={6} fontWeight={600}>clusters</text>
+				<text x="705" y="625" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Industry</text>
+				<text x="705" y="631" fontSize={6} fontWeight={600} {...getProps('Inflation')}>clusters</text>
 			</g>
 			<g>
-				<text x="745" y="615" fontSize={6} fontWeight={600}>Economic</text>
-				<text x="745" y="621" fontSize={6} fontWeight={600}>infrastructure</text>
-				<text x="745" y="627" fontSize={6} fontWeight={600}>quality</text>
+				<text x="745" y="615" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Economic</text>
+				<text x="745" y="621" fontSize={6} fontWeight={600} {...getProps('Inflation')}>infrastructure</text>
+				<text x="745" y="627" fontSize={6} fontWeight={600} {...getProps('Inflation')}>quality</text>
 			</g>
 			{/* State-Center-3 */}
 			<g>
-				<text x="700" y="682" fontSize={6} fontWeight={600}>Urban-rural</text>
-				<text x="700" y="688" fontSize={6} fontWeight={600}>economic</text>
-				<text x="700" y="694" fontSize={6} fontWeight={600}>linkages</text>
+				<text x="700" y="682" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Urban-rural</text>
+				<text x="700" y="688" fontSize={6} fontWeight={600} {...getProps('Inflation')}>economic</text>
+				<text x="700" y="694" fontSize={6} fontWeight={600} {...getProps('Inflation')}>linkages</text>
 			</g>
 			<g>
-				<text x="760" y="654" fontSize={6} fontWeight={600}>Regional</text>
-				<text x="760" y="660" fontSize={6} fontWeight={600}>economic</text>
-				<text x="760" y="666" fontSize={6} fontWeight={600}>integration</text>
+				<text x="760" y="654" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Regional</text>
+				<text x="760" y="660" fontSize={6} fontWeight={600} {...getProps('Inflation')}>economic</text>
+				<text x="760" y="666" fontSize={6} fontWeight={600} {...getProps('Inflation')}>integration</text>
 			</g>
 			<g>
-				<text x="745" y="680" fontSize={6} fontWeight={600}>Local</text>
-				<text x="745" y="686" fontSize={6} fontWeight={600}>market vitality</text>
+				<text x="745" y="680" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Local</text>
+				<text x="745" y="686" fontSize={6} fontWeight={600} {...getProps('Inflation')}>market vitality</text>
 			</g>
 			{/* State-Center-2 */}
 			<g>
-				<text x="760" y="710" fontSize={6} fontWeight={600}>Insurance</text>
-				<text x="760" y="716" fontSize={6} fontWeight={600}>coverage</text>
+				<text x="760" y="710" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Insurance</text>
+				<text x="760" y="716" fontSize={6} fontWeight={600} {...getProps('Inflation')}>coverage</text>
 			</g>
 			<g>
-				<text x="745" y="730" fontSize={6} fontWeight={600}>Property</text>
-				<text x="745" y="736" fontSize={6} fontWeight={600}>assets</text>
+				<text x="745" y="730" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Property</text>
+				<text x="745" y="736" fontSize={6} fontWeight={600} {...getProps('Inflation')}>assets</text>
 			</g>
 			{/* State-Center-1 */}
 			<g>
-				<text x="760" y="755" fontSize={4} fontWeight={600}>Financial</text>
-				<text x="760" y="759" fontSize={4} fontWeight={600}>literacy</text>
+				<text x="760" y="755" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Financial</text>
+				<text x="760" y="759" fontSize={4} fontWeight={600} {...getProps('Inflation')}>literacy</text>
 			</g>
 
 			{/* Private-Top-1 */}
 			<g>
-				<text x="792" y="275" fontSize={4} fontWeight={600}>Debt-to-</text>
-				<text x="792" y="280" fontSize={4} fontWeight={600}>Income</text>
-				<text x="792" y="285" fontSize={4} fontWeight={600}>Ratio</text>
+				<text x="792" y="275" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Debt-to-</text>
+				<text x="792" y="280" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Income</text>
+				<text x="792" y="285" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Ratio</text>
 			</g>
 			<g>
-				<text x="792" y="295" fontSize={4} fontWeight={600}>Income</text>
-				<text x="792" y="300" fontSize={4} fontWeight={600}>mobility</text>
-				<text x="792" y="305" fontSize={4} fontWeight={600}>barriers</text>
+				<text x="792" y="295" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Income</text>
+				<text x="792" y="300" fontSize={4} fontWeight={600} {...getProps('Inflation')}>mobility</text>
+				<text x="792" y="305" fontSize={4} fontWeight={600} {...getProps('Inflation')}>barriers</text>
 			</g>
 			{/* Private-Top-2 */}
 			<g>
-				<text x="794" y="335" fontSize={4} fontWeight={600}>Dependency</text>
-				<text x="794" y="340" fontSize={4} fontWeight={600}>ratio</text>
-				<text x="794" y="345" fontSize={4} fontWeight={600}>increase</text>
+				<text x="794" y="335" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Dependency</text>
+				<text x="794" y="340" fontSize={4} fontWeight={600} {...getProps('Inflation')}>ratio</text>
+				<text x="794" y="345" fontSize={4} fontWeight={600} {...getProps('Inflation')}>increase</text>
 			</g>
 			<g>
-				<text x="835" y="325" fontSize={4} fontWeight={600}>Household</text>
-				<text x="835" y="330" fontSize={4} fontWeight={600}>debt</text>
-				<text x="835" y="335" fontSize={4} fontWeight={600}>burden</text>
+				<text x="835" y="325" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Household</text>
+				<text x="835" y="330" fontSize={4} fontWeight={600} {...getProps('Inflation')}>debt</text>
+				<text x="835" y="335" fontSize={4} fontWeight={600} {...getProps('Inflation')}>burden</text>
 			</g>
 			<g>
-				<text x="810" y="315" fontSize={4} fontWeight={600}>Declining</text>
-				<text x="810" y="320" fontSize={4} fontWeight={600}>savings</text>
+				<text x="810" y="315" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Declining</text>
+				<text x="810" y="320" fontSize={4} fontWeight={600} {...getProps('Inflation')}>savings</text>
 			</g>
 
 			{/* Private-Top-4 */}
 			<g>
-				<text x="800" y="432" fontSize={7} fontWeight={600}>Purchasing</text>
-				<text x="800" y="439" fontSize={7} fontWeight={600}>power erosion</text>
+				<text x="800" y="432" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Purchasing</text>
+				<text x="800" y="439" fontSize={7} fontWeight={600} {...getProps('Inflation')}>power erosion</text>
 			</g>
 			<g>
-				<text x="870" y="400" fontSize={7} fontWeight={600}>Wealth</text>
-				<text x="870" y="407" fontSize={7} fontWeight={600}>concentration</text>
-				<text x="870" y="414" fontSize={7} fontWeight={600}>ratio</text>
+				<text x="870" y="400" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Wealth</text>
+				<text x="870" y="407" fontSize={7} fontWeight={600} {...getProps('Inflation')}>concentration</text>
+				<text x="870" y="414" fontSize={7} fontWeight={600} {...getProps('Inflation')}>ratio</text>
 			</g>
 			{/* Private-Top-5 */}
 			<g>
-				<text x="800" y="480" fontSize={7} fontWeight={600}>Higher</text>
-				<text x="800" y="487" fontSize={7} fontWeight={600}>taxes</text>
+				<text x="800" y="480" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Higher</text>
+				<text x="800" y="487" fontSize={7} fontWeight={600} {...getProps('Inflation')}>taxes</text>
 			</g>
 			<g>
-				<text x="850" y="465" fontSize={7} fontWeight={600}>Underemployment</text>
-				<text x="850" y="472" fontSize={7} fontWeight={600}>rates</text>
+				<text x="850" y="465" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Underemployment</text>
+				<text x="850" y="472" fontSize={7} fontWeight={600} {...getProps('Inflation')}>rates</text>
 			</g>
 			<g>
-				<text x="910" y="440" fontSize={7} fontWeight={600}>External debt</text>
-				<text x="910" y="447" fontSize={7} fontWeight={600}>exposure</text>
+				<text x="910" y="440" fontSize={7} fontWeight={600} {...getProps('Inflation')}>External debt</text>
+				<text x="910" y="447" fontSize={7} fontWeight={600} {...getProps('Inflation')}>exposure</text>
 			</g>
 
 			{/* Private-Center-5 */}
 			<g>
-				<text x="793" y="555" fontSize={6} fontWeight={600}>Inflation</text>
-				<text x="793" y="561" fontSize={6} fontWeight={600}>rate</text>
+				<text x="793" y="555" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Inflation</text>
+				<text x="793" y="561" fontSize={6} fontWeight={600} {...getProps('Inflation')}>rate</text>
 			</g>
 			<g>
-				<text x="805" y="575" fontSize={6} fontWeight={600}>National</text>
-				<text x="805" y="581" fontSize={6} fontWeight={600}>debt</text>
+				<text x="805" y="575" fontSize={6} fontWeight={600} {...getProps('Inflation')}>National</text>
+				<text x="805" y="581" fontSize={6} fontWeight={600} {...getProps('Inflation')}>debt</text>
 			</g>
 			<g>
-				<text x="825" y="553" fontSize={6} fontWeight={600}>Tax</text>
-				<text x="825" y="559" fontSize={6} fontWeight={600}>revenue</text>
+				<text x="825" y="553" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Tax</text>
+				<text x="825" y="559" fontSize={6} fontWeight={600} {...getProps('Inflation')}>revenue</text>
 			</g>
 			<g>
-				<text x="840" y="570" fontSize={6} fontWeight={600}>Амьжиргааны</text>
-				<text x="840" y="576" fontSize={6} fontWeight={600}>түвшний</text>
-				<text x="840" y="582" fontSize={6} fontWeight={600}>өсөлт</text>
+				<text x="840" y="570" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Амьжиргааны</text>
+				<text x="840" y="576" fontSize={6} fontWeight={600} {...getProps('Inflation')}>түвшний</text>
+				<text x="840" y="582" fontSize={6} fontWeight={600} {...getProps('Inflation')}>өсөлт</text>
 			</g>
 			<g>
-				<text x="865" y="595" fontSize={6} fontWeight={600}>Market</text>
-				<text x="865" y="601" fontSize={6} fontWeight={600}>competition</text>
+				<text x="865" y="595" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Market</text>
+				<text x="865" y="601" fontSize={6} fontWeight={600} {...getProps('Inflation')}>competition</text>
 			</g>
 			<g>
-				<text x="885" y="575" fontSize={6} fontWeight={600}>Export</text>
-				<text x="885" y="581" fontSize={6} fontWeight={600}>Import</text>
-				<text x="885" y="587" fontSize={6} fontWeight={600}>Balance</text>
+				<text x="885" y="575" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Export</text>
+				<text x="885" y="581" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Import</text>
+				<text x="885" y="587" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Balance</text>
 			</g>
 			<g>
-				<text x="910" y="590" fontSize={6} fontWeight={600}>Trade</text>
-				<text x="910" y="597" fontSize={6} fontWeight={600}>Balance</text>
+				<text x="910" y="590" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Trade</text>
+				<text x="910" y="597" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Balance</text>
 			</g>
 			<g>
-				<text x="925" y="610" fontSize={6} fontWeight={600}>Export</text>
-				<text x="925" y="616" fontSize={6} fontWeight={600}>diversity</text>
-				<text x="925" y="622" fontSize={6} fontWeight={600}>index</text>
+				<text x="925" y="610" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Export</text>
+				<text x="925" y="616" fontSize={6} fontWeight={600} {...getProps('Inflation')}>diversity</text>
+				<text x="925" y="622" fontSize={6} fontWeight={600} {...getProps('Inflation')}>index</text>
 			</g>
 			{/* Private-Center-4 */}
 			<g>
-				<text x="793" y="600" fontSize={6} fontWeight={600}>Economic</text>
-				<text x="793" y="606" fontSize={6} fontWeight={600}>opportunity</text>
-				<text x="793" y="612" fontSize={6} fontWeight={600}>distribution</text>
+				<text x="793" y="600" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Economic</text>
+				<text x="793" y="606" fontSize={6} fontWeight={600} {...getProps('Inflation')}>opportunity</text>
+				<text x="793" y="612" fontSize={6} fontWeight={600} {...getProps('Inflation')}>distribution</text>
 			</g>
 			<g>
-				<text x="793" y="628" fontSize={6} fontWeight={600}>Employment</text>
-				<text x="793" y="634" fontSize={6} fontWeight={600}>opportunity</text>
+				<text x="793" y="628" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Employment</text>
+				<text x="793" y="634" fontSize={6} fontWeight={600} {...getProps('Inflation')}>opportunity</text>
 			</g>
 			<g>
-				<text x="830" y="615" fontSize={6} fontWeight={600}>Investment</text>
-				<text x="830" y="621" fontSize={6} fontWeight={600}>flows</text>
+				<text x="830" y="615" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Investment</text>
+				<text x="830" y="621" fontSize={6} fontWeight={600} {...getProps('Inflation')}>flows</text>
 			</g>
 			<g>
-				<text x="850" y="630" fontSize={6} fontWeight={600}>Sectoral</text>
-				<text x="850" y="636" fontSize={6} fontWeight={600}>contribution</text>
+				<text x="850" y="630" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Sectoral</text>
+				<text x="850" y="636" fontSize={6} fontWeight={600} {...getProps('Inflation')}>contribution</text>
 			</g>
 			<g>
-				<text x="885" y="650" fontSize={6} fontWeight={600}>Labor</text>
-				<text x="885" y="656" fontSize={6} fontWeight={600}>markets</text>
+				<text x="885" y="650" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Labor</text>
+				<text x="885" y="656" fontSize={6} fontWeight={600} {...getProps('Inflation')}>markets</text>
 			</g>
 			{/* Private-Center-3 */}
 			<g>
-				<text x="795" y="660" fontSize={7} fontWeight={600}>Employment</text>
-				<text x="795" y="667" fontSize={7} fontWeight={600}>rate</text>
+				<text x="795" y="660" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Employment</text>
+				<text x="795" y="667" fontSize={7} fontWeight={600} {...getProps('Inflation')}>rate</text>
 			</g>
 			<g>
-				<text x="822" y="675" fontSize={7} fontWeight={600}>Pension</text>
+				<text x="822" y="675" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Pension</text>
 			</g>
 			<g>
-				<text x="850" y="685" fontSize={7} fontWeight={600}>Access to</text>
-				<text x="850" y="692" fontSize={7} fontWeight={600}>loan</text>
+				<text x="850" y="685" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Access to</text>
+				<text x="850" y="692" fontSize={7} fontWeight={600} {...getProps('Inflation')}>loan</text>
 			</g>
 			{/* Private-Center-2 */}
 			<g>
-				<text x="793" y="703" fontSize={6} fontWeight={600}>Emergency</text>
-				<text x="793" y="709" fontSize={6} fontWeight={600}>fund status</text>
+				<text x="793" y="703" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Emergency</text>
+				<text x="793" y="709" fontSize={6} fontWeight={600} {...getProps('Inflation')}>fund status</text>
 			</g>
 			<g>
-				<text x="793" y="725" fontSize={6} fontWeight={600}>Combined</text>
-				<text x="793" y="731" fontSize={6} fontWeight={600}>income</text>
+				<text x="793" y="725" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Combined</text>
+				<text x="793" y="731" fontSize={6} fontWeight={600} {...getProps('Inflation')}>income</text>
 			</g>
 			<g>
-				<text x="825" y="720" fontSize={6} fontWeight={600}>Household</text>
-				<text x="825" y="726" fontSize={6} fontWeight={600}>wealth</text>
+				<text x="825" y="720" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Household</text>
+				<text x="825" y="726" fontSize={6} fontWeight={600} {...getProps('Inflation')}>wealth</text>
 			</g>
 			{/* Private-Center-1 */}
 
 			<g>
-				<text textAnchor='middle' x="790" y="747" fontSize={4} fontWeight={600}>Seasonal variation</text>
-				<text textAnchor='middle' x="790" y="751" fontSize={4} fontWeight={600}>in earnings</text>
+				<text textAnchor='middle' x="790" y="747" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Seasonal variation</text>
+				<text textAnchor='middle' x="790" y="751" fontSize={4} fontWeight={600} {...getProps('Inflation')}>in earnings</text>
 			</g>
 			<g>
-				<text textAnchor='middle' x="790" y="760" fontSize={4} fontWeight={600}>Savings</text>
-				<text textAnchor='middle' x="790" y="764" fontSize={4} fontWeight={600}>rate</text>
+				<text textAnchor='middle' x="790" y="760" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Savings</text>
+				<text textAnchor='middle' x="790" y="764" fontSize={4} fontWeight={600} {...getProps('Inflation')}>rate</text>
 			</g>
 			<g>
-				<text textAnchor='middle' x="790" y="770" fontSize={4} fontWeight={600}>Income</text>
-				<text textAnchor='middle' x="790" y="774" fontSize={4} fontWeight={600}>level</text>
+				<text textAnchor='middle' x="790" y="770" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Income</text>
+				<text textAnchor='middle' x="790" y="774" fontSize={4} fontWeight={600} {...getProps('Inflation')}>level</text>
 			</g>
 			<g>
-				<text textAnchor='middle' x="810" y="755" fontSize={4} fontWeight={600}>Credit</text>
-				<text textAnchor='middle' x="810" y="759" fontSize={4} fontWeight={600}>score</text>
+				<text textAnchor='middle' x="810" y="755" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Credit</text>
+				<text textAnchor='middle' x="810" y="759" fontSize={4} fontWeight={600} {...getProps('Inflation')}>score</text>
 			</g>
-
 
 			{/* Social-Left-1 */}
 			<g>
@@ -535,8 +561,8 @@ const Chart = ({ filter }: Props) => {
 
 			{/* Education-Center-5 */}
 			<g>
-				<text x="550" y="800" fontSize={7} fontWeight={600}>Educational</text>
-				<text x="550" y="807" fontSize={7} fontWeight={600}>expense</text>
+				<text x="550" y="800" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Educational</text>
+				<text x="550" y="807" fontSize={7} fontWeight={600} {...getProps('Inflation')}>expense</text>
 			</g>
 			<g>
 				<text x="550" y="830" fontSize={7} fontWeight={600}>Social norm</text>
@@ -546,8 +572,8 @@ const Chart = ({ filter }: Props) => {
 				<text x="555" y="857" fontSize={7} fontWeight={600}>чанар</text>
 			</g>
 			<g>
-				<text x="565" y="880" fontSize={7} fontWeight={600}>Сургалтын</text>
-				<text x="565" y="887" fontSize={7} fontWeight={600}>орчин</text>
+				<text x="565" y="880" fontSize={7} fontWeight={600} {...getProps('Inflation')}>Сургалтын</text>
+				<text x="565" y="887" fontSize={7} fontWeight={600} {...getProps('Inflation')}>орчин</text>
 			</g>
 			<g>
 				<text x="585" y="905" fontSize={7} fontWeight={600}>Ерөнхий</text>
@@ -575,9 +601,9 @@ const Chart = ({ filter }: Props) => {
 				<text textAnchor='middle' x="665" y="806" fontSize={6} fontWeight={600}>attainment levels</text>
 			</g>
 			<g>
-				<text textAnchor='middle' x="675" y="830" fontSize={6} fontWeight={600}>Access to</text>
-				<text textAnchor='middle' x="675" y="836" fontSize={6} fontWeight={600}>educational</text>
-				<text textAnchor='middle' x="675" y="842" fontSize={6} fontWeight={600}>facilities</text>
+				<text textAnchor='middle' x="675" y="830" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Access to</text>
+				<text textAnchor='middle' x="675" y="836" fontSize={6} fontWeight={600} {...getProps('Inflation')}>educational</text>
+				<text textAnchor='middle' x="675" y="842" fontSize={6} fontWeight={600} {...getProps('Inflation')}>facilities</text>
 			</g>
 			<g>
 				<text textAnchor='middle' x="685" y="865" fontSize={6} fontWeight={600}>Access to</text>
@@ -585,8 +611,8 @@ const Chart = ({ filter }: Props) => {
 			</g>
 			{/* Education-Center-2 */}
 			<g>
-				<text x="700" y="800" fontSize={6} fontWeight={600}>Educational</text>
-				<text x="700" y="806" fontSize={6} fontWeight={600}>resources</text>
+				<text x="700" y="800" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Educational</text>
+				<text x="700" y="806" fontSize={6} fontWeight={600} {...getProps('Inflation')}>resources</text>
 			</g>
 			<g>
 				<text x="702" y="817" fontSize={6} fontWeight={600}>Home learning</text>
@@ -839,9 +865,9 @@ const Chart = ({ filter }: Props) => {
 				<text x="805" y="799" fontSize={4} fontWeight={600}>access</text>
 			</g>
 			<g>
-				<text x="815" y="805" fontSize={4} fontWeight={600}>Home</text>
-				<text x="815" y="809" fontSize={4} fontWeight={600}>environment</text>
-				<text x="815" y="813" fontSize={4} fontWeight={600}>quality</text>
+				<text x="815" y="805" fontSize={4} fontWeight={600} {...getProps('Inflation')}>Home</text>
+				<text x="815" y="809" fontSize={4} fontWeight={600} {...getProps('Inflation')}>environment</text>
+				<text x="815" y="813" fontSize={4} fontWeight={600} {...getProps('Inflation')}>quality</text>
 			</g>
 
 			{/* External-Center-2 */}
@@ -874,7 +900,7 @@ const Chart = ({ filter }: Props) => {
 				<text x="945" y="806" fontSize={6} fontWeight={600}>pasturelands</text>
 			</g>
 			<g>
-				<text x="940" y="825" fontSize={6} fontWeight={600}>Utility grids</text>
+				<text x="940" y="825" fontSize={6} fontWeight={600} {...getProps('Inflation')}>Utility grids</text>
 			</g>
 			<g>
 				<text x="935" y="845" fontSize={6} fontWeight={600}>Urban planning</text>
@@ -1053,8 +1079,8 @@ const Chart = ({ filter }: Props) => {
 				<text x="845" y="766" fontSize={5} fontWeight={600}>practices</text>
 			</g>
 			<g>
-				<text x="845" y="780" fontSize={5} fontWeight={600}>Household utilities</text>
-				<text x="845" y="785" fontSize={5} fontWeight={600}>access</text>
+				<text x="845" y="780" fontSize={5} fontWeight={600} {...getProps('Inflation')}>Household utilities</text>
+				<text x="845" y="785" fontSize={5} fontWeight={600} {...getProps('Inflation')}>access</text>
 			</g>
 
 			{/* Internal-Center-1 */}
@@ -1071,6 +1097,18 @@ const Chart = ({ filter }: Props) => {
 				<text x="803" y="783" fontSize={4} fontWeight={600}>Food</text>
 				<text x="803" y="787" fontSize={4} fontWeight={600}>quality</text>
 			</g>
+
+			<text transform="translate(620, 410) rotate(-45)" fontSize={25} fontWeight={900}>State</text>
+			<text transform="translate(370, 660) rotate(-45)" fontSize={25} fontWeight={900}>Social</text>
+
+			<text transform="translate(910, 360) rotate(45)" fontSize={25} fontWeight={900}>Private</text>
+			<text transform="translate(1160, 610) rotate(45)" fontSize={25} fontWeight={900}>Internal</text>
+
+			<text transform="translate(340, 910) rotate(45)" fontSize={25} fontWeight={900}>Education</text>
+			<text transform="translate(600, 1170) rotate(45)" fontSize={25} fontWeight={900}>Засаг</text>
+
+			<text transform="translate(910, 1240) rotate(-45)" fontSize={25} fontWeight={900}>Нийгэм</text>
+			<text transform="translate(1170, 980) rotate(-45)" fontSize={25} fontWeight={900}>External</text>
 		</svg>
 	)
 };

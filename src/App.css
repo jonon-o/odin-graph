@@ -13,12 +13,18 @@
 }
 
 .select {
-  position: fixed;
+  width: 200px !important;
+  position: fixed !important;
   top: 1rem;
   left: 1rem;
 }
 
 .selected {
   fill: green;
-  font-size: 50px;
+}
+
+svg text {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transition-duration: .15s;
 }
