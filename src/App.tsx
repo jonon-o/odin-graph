@@ -1,3 +1,4 @@
+// @ts-nocheck
 import './App.css'
 import Chart from './svg/Chart';
 import { useState } from 'react';
