@@ -13,6 +13,7 @@ function App() {
         <Select
             values={filter ? [filter] : []}
             clearable
+            placeholder='Filter'
             className='select'
             options={[
                 { value: 'Inflation', label: 'Inflation' },

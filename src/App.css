@@ -17,6 +17,7 @@
   position: fixed !important;
   top: 1rem;
   left: 1rem;
+  background: #fff;
 }
 
 .selected {
@@ -27,4 +28,15 @@ svg text {
   transition-property: all;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: .15s;
+}
+
+.level {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+
+.level:hover {
+  fill: rgba(23, 238, 8, 0.2);
 }
