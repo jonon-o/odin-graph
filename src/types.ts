@@ -1,0 +1,1 @@
+export type FilterValueType = 'Natural disasters' | 'Inflation' | 'Crises' | 'Geopolitical factors';
