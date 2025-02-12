@@ -1,5 +1,4 @@
-import { type ReactNode, type SVGProps, useEffect, useRef, useState } from 'react';
-// import svgPanZoom from 'svg-pan-zoom';
+import { type ReactNode, type SVGProps, useState } from 'react';
 import type { FilterValueType } from '../types';
 import { data } from './data';
 
@@ -20,9 +19,15 @@ const RADIUS_DEFAULT: Record<Level, number> = {
 
 const SHRINK_GAP = 20;
 
+const levelCircleProps: SVGProps<SVGCircleElement> = {
+	strokeWidth: 1,
+	stroke: 'black',
+	fill: 'transparent',
+	className: 'level'
+}
+
 const Chart = ({ filter }: Props) => {
 
-	const ref = useRef<SVGSVGElement | null>(null);
 	const [ selectedLevel, setSelectedLevel ] = useState<Level | null>(null);
 
 	const getProps = (type: FilterValueType): Partial<SVGProps<SVGTextElement>> => {
@@ -31,21 +36,13 @@ const Chart = ({ filter }: Props) => {
 		}
 		if (type === filter) {
 			return {
-				fill: '#39a636'
+				fill: '#07ad44'
 			}
 		}
 		return {
 
 		}
 	}
-
-	useEffect(() => {
-		if (ref.current) {
-			// svgPanZoom(ref.current, {
-			// 	controlIconsEnabled: true
-			// });
-		}
-	}, []);
 
 	const handleLevelChange = (value: typeof selectedLevel) => {
 		if (selectedLevel === value) {
@@ -74,7 +71,7 @@ const Chart = ({ filter }: Props) => {
 			for (const [ placementKey, placement ] of section) {
 				for (const [ levelKey, level ] of placement) {
 					for (let textGroupIndex = 0; textGroupIndex < level.length; textGroupIndex++) {
-						if (selectedLevel && selectedLevel !== levelKey && placementKey === 'center') {
+						if (selectedLevel && selectedLevel !== levelKey) {
 							continue;
 						}
 						const groupText = level[textGroupIndex];
@@ -83,14 +80,14 @@ const Chart = ({ filter }: Props) => {
 							const { text, filterable, expandedY, expandedX, ...rest } = textLine;
 							let fill = '#000';
 							if (filter && filterable.includes(filter)) {
-								fill = '#39a636';
+								fill = '#07ad44';
 							}
 							const props: Partial<SVGProps<SVGTextElement>> = {
 								...rest,
 								fill,
 								fontWeight: 600,
 							};
-							if (selectedLevel && placementKey === 'center') {
+							if (selectedLevel) {
 								props.transform = `translate(${expandedX ?? 0} ${expandedY ?? 0})`;
 								props.fontSize = 11;
 							}
@@ -105,10 +102,48 @@ const Chart = ({ filter }: Props) => {
 			}
 		}
 		return texts;
+	};
+
+	const getLevelLabelTransform = (level: Level): string | undefined => {
+		if (!selectedLevel || level === selectedLevel) {
+			return undefined;
+		}
+		switch (level) {
+			case 1: {
+				if (level > selectedLevel) {
+					return undefined;
+				}
+				return 'translate(-8 -8)';
+			}
+			case 2: {
+				if (level > selectedLevel) {
+					return 'translate(67 78)';
+				}
+				return 'translate(-35 -30)';
+			}
+			case 3: {
+				if (level > selectedLevel) {
+					return 'translate(45 55)';
+				}
+				return 'translate(-60 -52)';
+			}
+			case 4: {
+				if (level > selectedLevel) {
+					return 'translate(32 35)';
+				}
+				return 'translate(-75 -70)';
+			}
+			case 5: {
+				if (level > selectedLevel) {
+					return 'translate(11 11)';
+				}
+				return undefined;
+			}
+		}
 	}
 
 	return (
-		<svg ref={ref} width='100%' height='100%' viewBox='0 0 1580 1580' xmlns='http://www.w3.org/2000/svg' >
+		<svg width='100%' height='100%' viewBox='0 0 1580 1580' xmlns='http://www.w3.org/2000/svg' >
 			{/*<rect width="1578" height="1578" x={1} y={1} stroke='black' strokeWidth={1} fill='none'/>*/}
 			<rect className='rotate' width={760} height={760} x={410} y={410} stroke='black' strokeWidth={3} fill='none'/>
 
@@ -118,40 +153,6 @@ const Chart = ({ filter }: Props) => {
 			<rect className='rotate' width={380} height={380} x={600} y={865} fill='orange' fillOpacity={.5}/>
 			<line x1="250" y1="790" x2="1330" y2="790" stroke="black" strokeWidth={2}/>
 			<line x1="790" y1="250" x2="790" y2="1330" stroke="black" strokeWidth={2}/>
-
-			{/*Top Circle*/}
-			<g>
-				<circle cx='790' cy='260' r='250' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='260' r='200' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='260' r='150' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='260' r='100' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='260' r='50' stroke='black' strokeWidth='1' fill='none' />
-			</g>
-			{/*Bottom Circle*/}
-			<g>
-				<circle cx='790' cy='1320' r='250' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='1320' r='200' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='1320' r='150' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='1320' r='100' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='790' cy='1320' r='50' stroke='black' strokeWidth='1' fill='none' />
-				{/*<circle cx='790' cy='1320' r='2' fill='red' />*/}
-			</g>
-			{/*Left Circle*/}
-			<g>
-				<circle cx='260' cy='790' r='250' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='260' cy='790' r='200' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='260' cy='790' r='150' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='260' cy='790' r='100' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='260' cy='790' r='50' stroke='black' strokeWidth='1' fill='none' />
-			</g>
-			{/*Right Circle*/}
-			<g>
-				<circle cx='1320' cy='790' r='250' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='1320' cy='790' r='200' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='1320' cy='790' r='150' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='1320' cy='790' r='100' stroke='black' strokeWidth='1' fill='none' />
-				<circle cx='1320' cy='790' r='50' stroke='black' strokeWidth='1' fill='none' />
-			</g>
 
 			{renderTexts()}
 
@@ -184,15 +185,11 @@ const Chart = ({ filter }: Props) => {
 			</g>
 
 			<g>
-				<text x="937" y="962" transform={(selectedLevel !== null && selectedLevel !== 5) ? "translate(11 11)" : undefined} fontSize={18} fontWeight={600}>V</text>
-			</g>
-
-			<g>
-				<text x="865" y="890" fontSize={18} fontWeight={600}>III</text>
-			</g>
-
-			<g>
-				<text x="832" y="853" fontSize={18} fontWeight={600}>II</text>
+				<text x="800" y="815" fontSize={20} fontWeight={600} transform={getLevelLabelTransform(1)}>I</text>
+				<text x="832" y="853" fontSize={20} fontWeight={600} transform={getLevelLabelTransform(2)}>II</text>
+				<text x="865" y="890" fontSize={20} fontWeight={600} transform={getLevelLabelTransform(3)}>III</text>
+				<text x="895" y="925" fontSize={20} fontWeight={600} transform={getLevelLabelTransform(4)}>IV</text>
+				<text x="937" y="962" transform={getLevelLabelTransform(5)} fontSize={20} fontWeight={600}>V</text>
 			</g>
 
 			<text transform="translate(620, 410) rotate(-45)" fontSize={25} fontWeight={900}>State</text>
@@ -208,13 +205,47 @@ const Chart = ({ filter }: Props) => {
 			<text transform="translate(1170, 980) rotate(-45)" fontSize={25} fontWeight={900}>External</text>
 
 
+			{/*Top Circle*/}
+			<g>
+				<circle {...levelCircleProps} cx='790' cy='260' r={getCircleRadius(5)} />
+				<circle {...levelCircleProps} cx='790' cy='260' r={getCircleRadius(4)} />
+				<circle {...levelCircleProps} cx='790' cy='260' r={getCircleRadius(3)} />
+				<circle {...levelCircleProps} cx='790' cy='260' r={getCircleRadius(2)} />
+				<circle {...levelCircleProps} cx='790' cy='260' r={getCircleRadius(1)} />
+			</g>
+			{/*Bottom Circle*/}
+			<g>
+				<circle {...levelCircleProps} cx='790' cy='1320' r={getCircleRadius(5)} />
+				<circle {...levelCircleProps} cx='790' cy='1320' r={getCircleRadius(4)} />
+				<circle {...levelCircleProps} cx='790' cy='1320' r={getCircleRadius(3)} />
+				<circle {...levelCircleProps} cx='790' cy='1320' r={getCircleRadius(2)} />
+				<circle {...levelCircleProps} cx='790' cy='1320' r={getCircleRadius(1)} />
+			</g>
+			{/*Left Circle*/}
+			<g>
+				<circle {...levelCircleProps} cx='260' cy='790' r={getCircleRadius(5)} />
+				<circle {...levelCircleProps} cx='260' cy='790' r={getCircleRadius(4)} />
+				<circle {...levelCircleProps} cx='260' cy='790' r={getCircleRadius(3)} />
+				<circle {...levelCircleProps} cx='260' cy='790' r={getCircleRadius(2)} />
+				<circle {...levelCircleProps} cx='260' cy='790' r={getCircleRadius(1)} />
+			</g>
+			{/*Right Circle*/}
+			<g>
+				<circle {...levelCircleProps} cx='1320' cy='790' r={getCircleRadius(5)} />
+				<circle {...levelCircleProps} cx='1320' cy='790' r={getCircleRadius(4)} />
+				<circle {...levelCircleProps} cx='1320' cy='790' r={getCircleRadius(3)} />
+				<circle {...levelCircleProps} cx='1320' cy='790' r={getCircleRadius(2)} />
+				<circle {...levelCircleProps} cx='1320' cy='790' r={getCircleRadius(1)} />
+			</g>
+
+
 			{/*Middle Circle*/}
 			<g>
-				<circle cx='790' cy='790' r={getCircleRadius(5)} stroke='red' strokeWidth='1' fill='transparent' className='level' onClick={() => handleLevelChange(5)} />
-				<circle cx='790' cy='790' r={getCircleRadius(4)} stroke='blue' strokeWidth='1' fill='transparent' className='level' onClick={() => handleLevelChange(4)} />
-				<circle cx='790' cy='790' r={getCircleRadius(3)} stroke='green' strokeWidth='1' fill='transparent' className='level' onClick={() => handleLevelChange(3)} />
-				<circle cx='790' cy='790' r={getCircleRadius(2)} stroke='orange' strokeWidth='1' fill='transparent' className='level' onClick={() => handleLevelChange(2)} />
-				<circle cx='790' cy='790' r={getCircleRadius(1)} stroke='pink' strokeWidth='1' fill='transparent' className='level' onClick={() => handleLevelChange(1)} />
+				<circle {...levelCircleProps} cx='790' cy='790' r={getCircleRadius(5)} onClick={() => handleLevelChange(5)} />
+				<circle {...levelCircleProps} cx='790' cy='790' r={getCircleRadius(4)} onClick={() => handleLevelChange(4)} />
+				<circle {...levelCircleProps} cx='790' cy='790' r={getCircleRadius(3)} onClick={() => handleLevelChange(3)} />
+				<circle {...levelCircleProps} cx='790' cy='790' r={getCircleRadius(2)} onClick={() => handleLevelChange(2)} />
+				<circle {...levelCircleProps} cx='790' cy='790' r={getCircleRadius(1)} onClick={() => handleLevelChange(1)} />
 			</g>
 		</svg>
 	)

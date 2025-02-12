@@ -27,7 +27,7 @@
 svg text {
   transition-property: all;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-  transition-duration: .15s;
+  transition-duration: 300ms;
 }
 
 .level {
@@ -39,4 +39,8 @@ svg text {
 
 .level:hover {
   fill: rgba(23, 238, 8, 0.2);
+}
+
+text {
+  font-family: "Robot", sans-serif;
 }

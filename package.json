@@ -13,7 +13,7 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-dropdown-select": "^4.11.4",
-    "svg-pan-zoom": "^3.6.2"
+    "react-svg-pan-zoom": "^3.13.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
