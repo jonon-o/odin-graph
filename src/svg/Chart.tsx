@@ -1,5 +1,5 @@
 import { type ReactNode, type SVGProps, useEffect, useRef, useState } from 'react';
-import svgPanZoom from 'svg-pan-zoom';
+// import svgPanZoom from 'svg-pan-zoom';
 import type { FilterValueType } from '../types';
 import { data } from './data';
 
@@ -23,7 +23,7 @@ const SHRINK_GAP = 20;
 const Chart = ({ filter }: Props) => {
 
 	const ref = useRef<SVGSVGElement | null>(null);
-	const [ selectedLevel, setSelectedLevel ] = useState<Level | null>(1);
+	const [ selectedLevel, setSelectedLevel ] = useState<Level | null>(null);
 
 	const getProps = (type: FilterValueType): Partial<SVGProps<SVGTextElement>> => {
 		if (!filter) {
@@ -41,9 +41,9 @@ const Chart = ({ filter }: Props) => {
 
 	useEffect(() => {
 		if (ref.current) {
-			svgPanZoom(ref.current, {
-				controlIconsEnabled: true
-			});
+			// svgPanZoom(ref.current, {
+			// 	controlIconsEnabled: true
+			// });
 		}
 	}, []);
 
