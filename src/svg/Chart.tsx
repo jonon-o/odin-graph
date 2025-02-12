@@ -41,9 +41,9 @@ const Chart = ({ filter }: Props) => {
 
 	useEffect(() => {
 		if (ref.current) {
-			// svgPanZoom(ref.current, {
-			// 	controlIconsEnabled: true
-			// });
+			svgPanZoom(ref.current, {
+				controlIconsEnabled: true
+			});
 		}
 	}, []);
 
