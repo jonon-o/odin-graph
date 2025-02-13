@@ -1,13 +1,12 @@
-import { type ReactNode, type SVGProps, useState } from 'react';
-import type { FilterValueType } from '../types';
+import { type ReactNode, type SVGProps } from 'react';
+import type { FilterValueType, Level } from '../types';
 import { data } from './data';
 
 interface Props {
 	filter: FilterValueType | null;
+	selectedLevel: Level | null;
+	onLevelChange: (level: Level | null) => void;
 }
-
-type Level = 1 | 2 | 3 | 4 | 5;
-
 
 const RADIUS_DEFAULT: Record<Level, number> = {
 	"1": 50,
@@ -26,9 +25,8 @@ const levelCircleProps: SVGProps<SVGCircleElement> = {
 	className: 'level'
 }
 
-const Chart = ({ filter }: Props) => {
+const Chart = ({ filter, selectedLevel, onLevelChange }: Props) => {
 
-	const [ selectedLevel, setSelectedLevel ] = useState<Level | null>(null);
 
 	const getProps = (type: FilterValueType): Partial<SVGProps<SVGTextElement>> => {
 		if (!filter) {
@@ -46,10 +44,10 @@ const Chart = ({ filter }: Props) => {
 
 	const handleLevelChange = (value: typeof selectedLevel) => {
 		if (selectedLevel === value) {
-			setSelectedLevel(null);
+			onLevelChange(null);
 			return;
 		}
-		setSelectedLevel(value);
+		onLevelChange(value);
 	}
 
 	const getCircleRadius = (lvl: Level): number => {

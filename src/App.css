@@ -44,3 +44,40 @@ svg text {
 text {
   font-family: "Robot", sans-serif;
 }
+
+.table {
+  width: 200px;
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  border-collapse: collapse;
+  td {
+    border: 1px solid lightgray;
+    padding: 2px 10px;
+  }
+}
+
+.table-label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.table-container {
+  height: 100%;
+  overflow: auto;
+}
+
+.row-blue {
+  background-color: #8282d880;
+}
+
+.row-red {
+  background-color: #ff000080;
+}
+
+.row-green {
+  background-color: #8dce8d80;
+}
+
+.row-yellow {
+  background-color: #FFA50080;
+}
