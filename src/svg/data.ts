@@ -36,12 +36,13 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Financial', filterable: ['Inflation'], x: 766, y: 752, fontSize: 5, expandedX: -50, expandedY: -80 },
-								{ text: 'literacy', filterable: ['Inflation'], x: 766, y: 757, fontSize: 5, expandedX: -50, expandedY: -76 }
+								{ text: 'Seasonal', filterable: ['Inflation'], x: 770, y: 750, fontSize: 4, expandedX: -50, expandedY: -80 },
+								{ text: 'variation', filterable: ['Inflation'], x: 770, y: 754, fontSize: 4, expandedX: -50, expandedY: -76 },
+								{ text: 'in earnings', filterable: ['Inflation'], x: 765, y: 758, fontSize: 4, expandedX: -50, expandedY: -76 }
 							],
 							[
-								{ text: 'Credit', filterable: ['Inflation'], x: 787, y: 765, fontSize: 5, textAnchor: 'end', expandedX: -20, expandedY: -60 },
-								{ text: 'score', filterable: ['Inflation'], x: 787, y: 770, fontSize: 5, textAnchor: 'end', expandedX: -20, expandedY: -56 }
+								{ text: 'Credit', filterable: ['Inflation'], x: 787, y: 766, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: -60 },
+								{ text: 'score', filterable: ['Inflation'], x: 787, y: 770, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: -56 }
 							]
 						]
 					],
@@ -49,8 +50,14 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Savings', filterable: ['Inflation'], x: 762, y: 720, fontSize: 8, textAnchor: 'middle', expandedX: -25, expandedY: -55 },
-								{ text: 'rate', filterable: ['Inflation'], x: 762, y: 728, fontSize: 8, textAnchor: 'middle', expandedX: -25, expandedY: -51 }
+								{ text: 'State', filterable: ['Inflation'], x: 740, y: 720, fontSize: 6, expandedX: -25, expandedY: -55 },
+								{ text: 'Support', filterable: ['Inflation'], x: 740, y: 726, fontSize: 6, expandedX: -25, expandedY: -51 },
+								{ text: 'Benefits', filterable: ['Inflation'], x: 740, y: 732, fontSize: 6, expandedX: -25, expandedY: -51 }
+							],
+							[
+								{ text: 'Social', filterable: ['Inflation'], x: 769, y: 700, fontSize: 6, expandedX: -25, expandedY: -55 },
+								{ text: 'Security', filterable: ['Inflation'], x: 763, y: 706, fontSize: 6, expandedX: -25, expandedY: -51 },
+								{ text: 'Coverage', filterable: ['Inflation'], x: 760, y: 712, fontSize: 6, expandedX: -25, expandedY: -51 }
 							]
 						]
 					],
@@ -58,17 +65,29 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Public', filterable: ['Inflation'], x: 700, y: 682, fontSize: 7, expandedX: 20, expandedY: 10 },
-								{ text: 'infrastructure', filterable: ['Inflation'], x: 700, y: 689, fontSize: 7, expandedX: 20, expandedY: 14 },
-								{ text: 'investment', filterable: ['Inflation'], x: 700, y: 696, fontSize: 7, expandedX: 20, expandedY: 18 }
+								{ text: 'Public', filterable: ['Inflation'], x: 705, y: 695, fontSize: 5, expandedX: 20, expandedY: 10 },
+								{ text: 'Infrastructure', filterable: ['Inflation'], x: 705, y: 700, fontSize: 5, expandedX: 20, expandedY: 14 },
+								{ text: 'Development', filterable: ['Inflation'], x: 705, y: 705, fontSize: 5, expandedX: 20, expandedY: 18 }
 							],
 							[
-								{ text: 'Pension', filterable: ['Inflation'], x: 725, y: 676, fontSize: 7, expandedX: -30, expandedY: -10 }
+								{ text: 'Regional', filterable: ['Inflation'], x: 757, y: 675, fontSize: 5, expandedX: -25, expandedY: -40 },
+								{ text: 'Development', filterable: ['Inflation'], x: 757, y: 680, fontSize: 5, expandedX: -25, expandedY: -36 },
+								{ text: 'Balance', filterable: ['Inflation'], x: 757, y: 685, fontSize: 5, expandedX: -25, expandedY: -32 }
 							],
 							[
-								{ text: 'Regional', filterable: ['Inflation'], x: 755, y: 654, fontSize: 7, expandedX: -25, expandedY: -40 },
-								{ text: 'economic', filterable: ['Inflation'], x: 755, y: 661, fontSize: 7, expandedX: -25, expandedY: -36 },
-								{ text: 'integration', filterable: ['Inflation'], x: 755, y: 668, fontSize: 7, expandedX: -25, expandedY: -32 }
+								{ text: 'State', filterable: ['Inflation'], x: 730, y: 670, fontSize: 5, expandedX: -25, expandedY: -40 },
+								{ text: 'Support', filterable: ['Inflation'], x: 730, y: 675, fontSize: 5, expandedX: -25, expandedY: -36 },
+								{ text: 'System', filterable: ['Inflation'], x: 730, y: 680, fontSize: 5, expandedX: -25, expandedY: -32 }
+							],
+							[
+								{ text: 'Public', filterable: ['Inflation'], x: 700, y: 675, fontSize: 5, expandedX: -25, expandedY: -40 },
+								{ text: 'Service', filterable: ['Inflation'], x: 700, y: 680, fontSize: 5, expandedX: -25, expandedY: -36 },
+								{ text: 'Delivery', filterable: ['Inflation'], x: 700, y: 685, fontSize: 5, expandedX: -25, expandedY: -32 }
+							],
+							[
+								{ text: 'Local', filterable: ['Inflation'], x: 760, y: 650, fontSize: 5, expandedX: -25, expandedY: -40 },
+								{ text: 'Ergonomic', filterable: ['Inflation'], x: 760, y: 655, fontSize: 5, expandedX: -25, expandedY: -36 },
+								{ text: 'Programs', filterable: ['Inflation'], x: 760, y: 660, fontSize: 5, expandedX: -25, expandedY: -32 }
 							]
 						]
 					],
@@ -76,30 +95,24 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Investment', filterable: ['Inflation'], x: 665, y: 650, fontSize: 6, expandedX: -15, expandedY: -30 },
-								{ text: 'flows', filterable: ['Inflation'], x: 665, y: 656, fontSize: 6, expandedX: -15, expandedY: -26 }
+								{ text: 'State', filterable: ['Inflation'], x: 665, y: 650, fontSize: 6, expandedX: -15, expandedY: -30 },
+								{ text: 'Resource', filterable: ['Inflation'], x: 665, y: 656, fontSize: 6, expandedX: -15, expandedY: -26 },
+								{ text: 'Management', filterable: ['Inflation'], x: 665, y: 662, fontSize: 6, expandedX: -15, expandedY: -26 }
 							],
 							[
-								{ text: 'Public sector', filterable: ['Inflation'], x: 680, y: 630, fontSize: 6, expandedX: -15, expandedY: 20 },
-								{ text: 'investment', filterable: ['Inflation'], x: 680, y: 636, fontSize: 6, expandedX: -15, expandedY: 24 }
+								{ text: 'Economic', filterable: ['Inflation'], x: 690, y: 630, fontSize: 6, expandedX: -15, expandedY: -30 },
+								{ text: 'Regulation', filterable: ['Inflation'], x: 690, y: 636, fontSize: 6, expandedX: -15, expandedY: -26 },
+								{ text: 'Quality', filterable: ['Inflation'], x: 690, y: 642, fontSize: 6, expandedX: -15, expandedY: -26 }
 							],
 							[
-								{ text: 'Employment', filterable: ['Inflation'], x: 718, y: 636, fontSize: 6, expandedX: 5, expandedY: -10 },
-								{ text: 'opportunity', filterable: ['Inflation'], x: 718, y: 642, fontSize: 6, expandedX: 5, expandedY: -6 }
+								{ text: 'Public', filterable: ['Inflation'], x: 730, y: 615, fontSize: 6, expandedX: -15, expandedY: -30 },
+								{ text: 'Sector', filterable: ['Inflation'], x: 730, y: 621, fontSize: 6, expandedX: -15, expandedY: -26 },
+								{ text: 'Efficiency', filterable: ['Inflation'], x: 730, y: 627, fontSize: 6, expandedX: -15, expandedY: -26 }
 							],
 							[
-								{ text: 'Economic', filterable: ['Inflation'], x: 715, y: 610, fontSize: 6, expandedX: 0, expandedY: -25 },
-								{ text: 'infrastructure', filterable: ['Inflation'], x: 715, y: 616, fontSize: 6, expandedX: 0, expandedY: -21 },
-								{ text: 'quality', filterable: ['Inflation'], x: 715, y: 622, fontSize: 6, expandedX: 0, expandedY: -17 }
-							],
-							[
-								{ text: 'Economic', filterable: ['Inflation'], x: 757, y: 600, fontSize: 6, expandedX: -30, expandedY: 65 },
-								{ text: 'opportunity', filterable: ['Inflation'], x: 757, y: 606, fontSize: 6, expandedX: -30, expandedY: 69 },
-								{ text: 'distribution', filterable: ['Inflation'], x: 757, y: 612, fontSize: 6, expandedX: -30, expandedY: 73 }
-							],
-							[
-								{ text: 'Real GDP', filterable: ['Inflation'], x: 757, y: 625, fontSize: 6, expandedX: -25, expandedY: 85 },
-								{ text: 'growth rate', filterable: ['Inflation'], x: 757, y: 631, fontSize: 6, expandedX: -25, expandedY: 89 }
+								{ text: 'Real', filterable: ['Inflation'], x: 770, y: 610, fontSize: 6, expandedX: -15, expandedY: -30 },
+								{ text: 'GDP', filterable: ['Inflation'], x: 770, y: 616, fontSize: 6, expandedX: -15, expandedY: -26 },
+								{ text: 'rate', filterable: ['Inflation'], x: 770, y: 622, fontSize: 6, expandedX: -15, expandedY: -26 }
 							]
 						]
 					],
@@ -107,31 +120,35 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'Research &', filterable: ['Inflation'], x: 630, y: 610, fontSize: 6, expandedX: 5, expandedY: 0 },
-								{ text: 'development', filterable: ['Inflation'], x: 630, y: 616, fontSize: 6, expandedX: 5, expandedY: 5 },
-								{ text: 'expenditure', filterable: ['Inflation'], x: 630, y: 622, fontSize: 6, expandedX: 5, expandedY: 10 }
+								{ text: 'State', filterable: ['Inflation'], x: 630, y: 610, fontSize: 6, expandedX: 5, expandedY: 0 },
+								{ text: 'Budget', filterable: ['Inflation'], x: 630, y: 616, fontSize: 6, expandedX: 5, expandedY: 5 },
+								{ text: 'Balance', filterable: ['Inflation'], x: 630, y: 622, fontSize: 6, expandedX: 5, expandedY: 10 }
 							],
 							[
-								{ text: 'Tax', filterable: ['Inflation'], x: 660, y: 595, fontSize: 6, expandedX: 25, expandedY: -10 },
-								{ text: 'revenue', filterable: ['Inflation'], x: 660, y: 601, fontSize: 6, expandedX: 25, expandedY: -5 }
+								{ text: 'Fiscal', filterable: ['Inflation'], x: 655, y: 595, fontSize: 6, expandedX: 25, expandedY: -10 },
+								{ text: 'Policy', filterable: ['Inflation'], x: 655, y: 601, fontSize: 6, expandedX: 25, expandedY: -5 },
+								{ text: 'Effectiveness', filterable: ['Inflation'], x: 655, y: 607, fontSize: 6, expandedX: 25, expandedY: -5 }
 							],
 							[
-								{ text: 'National', filterable: ['Inflation'], x: 680, y: 585, fontSize: 6, expandedX: 50, expandedY: -10 },
-								{ text: 'debt', filterable: ['Inflation'], x: 680, y: 591, fontSize: 6, expandedX: 50, expandedY: -5 }
+								{ text: 'Economic', filterable: ['Inflation'], x: 675, y: 585, fontSize: 6, expandedX: 50, expandedY: -10 },
+								{ text: 'Policy', filterable: ['Inflation'], x: 677, y: 591, fontSize: 6, expandedX: 50, expandedY: -5 },
+								{ text: 'Framework', filterable: ['Inflation'], x: 680, y: 597, fontSize: 6, expandedX: 50, expandedY: -5 }
 							],
 							[
-								{ text: 'Currency', filterable: ['Inflation'], x: 700, y: 570, fontSize: 6, expandedX: -20, expandedY: 80 },
-								{ text: 'stability', filterable: ['Inflation'], x: 700, y: 576, fontSize: 6, expandedX: -20, expandedY: 85 }
+								{ text: 'State', filterable: ['Inflation'], x: 705, y: 570, fontSize: 6, expandedX: -20, expandedY: 80 },
+								{ text: 'Revenue', filterable: ['Inflation'], x: 705, y: 576, fontSize: 6, expandedX: -20, expandedY: 85 },
+								{ text: 'Performance', filterable: ['Inflation'], x: 705, y: 582, fontSize: 6, expandedX: -20, expandedY: 85 }
 							],
 							[
-								{ text: 'Central', filterable: ['Inflation'], x: 734, y: 560, fontSize: 6, expandedX: 10, expandedY: 70 },
-								{ text: 'bank', filterable: ['Inflation'], x: 734, y: 566, fontSize: 6, expandedX: 10, expandedY: 75 },
-								{ text: 'interest', filterable: ['Inflation'], x: 734, y: 572, fontSize: 6, expandedX: 10, expandedY: 80 },
-								{ text: 'rate', filterable: ['Inflation'], x: 734, y: 578, fontSize: 6, expandedX: 10, expandedY: 85 }
+								{ text: 'Debt', filterable: ['Inflation'], x: 734, y: 560, fontSize: 6, expandedX: 10, expandedY: 70 },
+								{ text: 'Manage', filterable: ['Inflation'], x: 734, y: 566, fontSize: 6, expandedX: 10, expandedY: 75 },
+								{ text: 'ment', filterable: ['Inflation'], x: 734, y: 572, fontSize: 6, expandedX: 10, expandedY: 75 }
 							],
 							[
-								{ text: 'Inflation', filterable: ['Inflation'], x: 763, y: 565, fontSize: 6, expandedX: -25, expandedY: 130 },
-								{ text: 'rate', filterable: ['Inflation'], x: 763, y: 571, fontSize: 6, expandedX: -25, expandedY: 135 }
+								{ text: 'Central', filterable: ['Inflation'], x: 763, y: 555, fontSize: 6, expandedX: -25, expandedY: 130 },
+								{ text: 'Bank', filterable: ['Inflation'], x: 763, y: 561, fontSize: 6, expandedX: -25, expandedY: 135 },
+								{ text: 'Interest', filterable: ['Inflation'], x: 763, y: 567, fontSize: 6, expandedX: -25, expandedY: 135 },
+								{ text: 'Rate', filterable: ['Inflation'], x: 763, y: 573, fontSize: 6, expandedX: -25, expandedY: 135 }
 							]
 						]
 					],
@@ -144,59 +161,133 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Job quality', filterable: ['Inflation'], x: 788, y: 290, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: 70 },
-								{ text: 'degradation', filterable: ['Inflation'], x: 788, y: 295, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: 74 }
+								{ text: 'Opportunity', filterable: ['Inflation'], x: 788, y: 283, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: 70 },
+								{ text: 'Barriers', filterable: ['Inflation'], x: 788, y: 287, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: 74 }
+							],
+							[
+								{ text: 'Job quality', filterable: ['Inflation'], x: 788, y: 295, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: 70 },
+								{ text: 'degradation', filterable: ['Inflation'], x: 788, y: 299, fontSize: 4, textAnchor: 'end', expandedX: -20, expandedY: 74 }
 							]
 						]
 					],
 					[
 						2,
-						[]
+						[
+							[
+								{ text: 'Protection', filterable: ['Inflation'], x: 770, y: 318, fontSize: 6, textAnchor: 'end', expandedX: -20, expandedY: 70 },
+								{ text: 'System Gaps', filterable: ['Inflation'], x: 770, y: 324, fontSize: 6, textAnchor: 'end', expandedX: -20, expandedY: 74 }
+							],
+							[
+								{ text: 'Benefit', filterable: ['Inflation'], x: 786, y: 336, fontSize: 6, textAnchor: 'end', expandedX: -20, expandedY: 70 },
+								{ text: 'Distribution', filterable: ['Inflation'], x: 786, y: 342, fontSize: 6, textAnchor: 'end', expandedX: -20, expandedY: 74 },
+								{ text: 'Failure', filterable: ['Inflation'], x: 786, y: 348, fontSize: 6, textAnchor: 'end', expandedX: -20, expandedY: 74 }
+							]
+						]
 					],
 					[
 						3,
-						[]
+						[
+							[
+								{ text: 'Regional', filterable: ['Inflation'], x: 706, y: 345, fontSize: 6, expandedX: -20, expandedY: 70 },
+								{ text: 'Imbalance', filterable: ['Inflation'], x: 705, y: 351, fontSize: 6, expandedX: -20, expandedY: 74 }
+							],
+							[
+								{ text: 'Infrastructure Gaps', filterable: ['Inflation'], x: 700, y: 365, fontSize: 6, expandedX: -20, expandedY: 70 },
+							],
+							[
+								{ text: 'Service', filterable: ['Inflation'], x: 765, y: 366, fontSize: 6, expandedX: -20, expandedY: 70 },
+								{ text: 'Delivery', filterable: ['Inflation'], x: 765, y: 372, fontSize: 6, expandedX: -20, expandedY: 70 },
+								{ text: 'Failure', filterable: ['Inflation'], x: 765, y: 378, fontSize: 6, expandedX: -20, expandedY: 70 },
+							],
+							[
+								{ text: 'Support System', filterable: ['Inflation'], x: 710, y: 375, fontSize: 6, expandedX: -20, expandedY: 70 },
+								{ text: 'Breakdown', filterable: ['Inflation'], x: 710, y: 381, fontSize: 6, expandedX: -20, expandedY: 70 },
+							],
+							[
+								{ text: 'Program', filterable: ['Inflation'], x: 763, y: 390, fontSize: 6, expandedX: -20, expandedY: 70 },
+								{ text: 'Implementation', filterable: ['Inflation'], x: 744, y: 396, fontSize: 6, expandedX: -20, expandedY: 70 },
+								{ text: 'Gaps', filterable: ['Inflation'], x: 773, y: 402, fontSize: 6, expandedX: -20, expandedY: 70 },
+							]
+						]
 					],
 					[
 						4,
 						[
 							[
-								{ text: 'Debt burden', filterable: ['Inflation'], x: 670, y: 400, fontSize: 7, expandedX: 30, expandedY: 30 },
-								{ text: 'increase', filterable: ['Inflation'], x: 670, y: 409, fontSize: 7, expandedX: 30, expandedY: 34 }
+								{ text: 'Resource', filterable: ['Inflation'], x: 670, y: 385, fontSize: 6, expandedX: 30, expandedY: 30 },
+								{ text: 'Mismanagement', filterable: ['Inflation'], x: 660, y: 391, fontSize: 6, expandedX: 30, expandedY: 34 }
 							],
 							[
-								{ text: 'Industrial', filterable: ['Inflation'], x: 745, y: 420, fontSize: 7, expandedX: -20, expandedY: -70 },
-								{ text: 'production', filterable: ['Inflation'], x: 745, y: 429, fontSize: 7, expandedX: -20, expandedY: -66 },
-								{ text: 'decline', filterable: ['Inflation'], x: 745, y: 438, fontSize: 7, expandedX: -20, expandedY: -62 }
+								{ text: 'Regulatory', filterable: ['Inflation'], x: 680, y: 410, fontSize: 6, expandedX: 30, expandedY: 30 },
+								{ text: 'Dysfunction', filterable: ['Inflation'], x: 680, y: 416, fontSize: 6, expandedX: 30, expandedY: 34 }
+							],
+							[
+								{ text: 'Debt', filterable: ['Inflation'], x: 720, y: 420, fontSize: 6, expandedX: 30, expandedY: 30 },
+								{ text: 'burden', filterable: ['Inflation'], x: 720, y: 426, fontSize: 6, expandedX: 30, expandedY: 30 },
+								{ text: 'increase', filterable: ['Inflation'], x: 720, y: 432, fontSize: 6, expandedX: 30, expandedY: 34 }
+							],
+							[
+								{ text: 'Inefficiency', filterable: ['Inflation'], x: 750, y: 440, fontSize: 6, expandedX: 30, expandedY: 34 }
 							]
+							// [
+							// 	{ text: 'Industrial', filterable: ['Inflation'], x: 745, y: 420, fontSize: 7, expandedX: -20, expandedY: -70 },
+							// 	{ text: 'production', filterable: ['Inflation'], x: 745, y: 429, fontSize: 7, expandedX: -20, expandedY: -66 },
+							// 	{ text: 'decline', filterable: ['Inflation'], x: 745, y: 438, fontSize: 7, expandedX: -20, expandedY: -62 }
+							// ]
 						]
 					],
 					[
 						5,
 						[
 							[
-								{ text: 'Unequal', filterable: ['Inflation'], x: 630, y: 423, fontSize: 7, expandedX: 10, expandedY: 5 },
-								{ text: 'infrastructure', filterable: ['Inflation'], x: 627, y: 430, fontSize: 7, expandedX: 10, expandedY: 9 },
-								{ text: 'development', filterable: ['Inflation'], x: 627, y: 437, fontSize: 7, expandedX: 10, expandedY: 13 }
+								{ text: 'Budget', filterable: ['Inflation'], x: 635, y: 420, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Deficit', filterable: ['Inflation'], x: 635, y: 426, fontSize: 6, expandedX: 30, expandedY: 34 }
 							],
 							[
-								{ text: 'Capital', filterable: ['Inflation'], x: 670, y: 447, fontSize: 7, expandedX: 40, expandedY: -25 },
-								{ text: 'depreciation', filterable: ['Inflation'], x: 670, y: 454, fontSize: 7, expandedX: 40, expandedY: -22 },
-								{ text: 'rate', filterable: ['Inflation'], x: 670, y: 461, fontSize: 7, expandedX: 40, expandedY: -18 }
+								{ text: 'Fiscal', filterable: ['Inflation'], x: 640, y: 440, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Policy', filterable: ['Inflation'], x: 640, y: 446, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Failure', filterable: ['Inflation'], x: 640, y: 452, fontSize: 6, expandedX: 30, expandedY: 34 }
 							],
 							[
-								{ text: 'Slow Real', filterable: ['Inflation'], x: 700, y: 465, fontSize: 7, expandedX: 40, expandedY: 0 },
-								{ text: 'State', filterable: ['Inflation'], x: 700, y: 472, fontSize: 7, expandedX: 40, expandedY: 4 },
-								{ text: 'Market', filterable: ['Inflation'], x: 700, y: 479, fontSize: 7, expandedX: 40, expandedY: 8 }
+								{ text: 'Policy', filterable: ['Inflation'], x: 665, y: 450, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Framework', filterable: ['Inflation'], x: 665, y: 456, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Weakness', filterable: ['Inflation'], x: 665, y: 462, fontSize: 6, expandedX: 30, expandedY: 34 }
 							],
 							[
-								{ text: 'Boost', filterable: ['Inflation'], x: 730, y: 480, fontSize: 7, expandedX: 10, expandedY: -90 },
-								{ text: 'Inflation', filterable: ['Inflation'], x: 730, y: 489, fontSize: 7, expandedX: 10, expandedY: -89 }
+								{ text: 'Revenue', filterable: ['Inflation'], x: 695, y: 470, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Shortfall', filterable: ['Inflation'], x: 695, y: 476, fontSize: 6, expandedX: 30, expandedY: 34 },
 							],
 							[
-								{ text: 'Real wage', filterable: ['Inflation'], x: 755, y: 470, fontSize: 7, expandedX: -45, expandedY: -120 },
-								{ text: 'decline', filterable: ['Inflation'], x: 755, y: 477, fontSize: 7, expandedX: -45, expandedY: -116 }
-							]
+								{ text: 'National', filterable: ['Inflation'], x: 730, y: 480, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Debt', filterable: ['Inflation'], x: 730, y: 486, fontSize: 6, expandedX: 30, expandedY: 34 },
+							],
+							[
+								{ text: 'Currency', filterable: ['Inflation'], x: 760, y: 485, fontSize: 6, expandedX: 30, expandedY: 34 },
+								{ text: 'Stability', filterable: ['Inflation'], x: 760, y: 491, fontSize: 6, expandedX: 30, expandedY: 34 },
+							],
+							// [
+							// 	{ text: 'Unequal', filterable: ['Inflation'], x: 630, y: 423, fontSize: 7, expandedX: 10, expandedY: 5 },
+							// 	{ text: 'infrastructure', filterable: ['Inflation'], x: 627, y: 430, fontSize: 7, expandedX: 10, expandedY: 9 },
+							// 	{ text: 'development', filterable: ['Inflation'], x: 627, y: 437, fontSize: 7, expandedX: 10, expandedY: 13 }
+							// ],
+							// [
+							// 	{ text: 'Capital', filterable: ['Inflation'], x: 670, y: 447, fontSize: 7, expandedX: 40, expandedY: -25 },
+							// 	{ text: 'depreciation', filterable: ['Inflation'], x: 670, y: 454, fontSize: 7, expandedX: 40, expandedY: -22 },
+							// 	{ text: 'rate', filterable: ['Inflation'], x: 670, y: 461, fontSize: 7, expandedX: 40, expandedY: -18 }
+							// ],
+							// [
+							// 	{ text: 'Slow Real', filterable: ['Inflation'], x: 700, y: 465, fontSize: 7, expandedX: 40, expandedY: 0 },
+							// 	{ text: 'State', filterable: ['Inflation'], x: 700, y: 472, fontSize: 7, expandedX: 40, expandedY: 4 },
+							// 	{ text: 'Market', filterable: ['Inflation'], x: 700, y: 479, fontSize: 7, expandedX: 40, expandedY: 8 }
+							// ],
+							// [
+							// 	{ text: 'Boost', filterable: ['Inflation'], x: 730, y: 480, fontSize: 7, expandedX: 10, expandedY: -90 },
+							// 	{ text: 'Inflation', filterable: ['Inflation'], x: 730, y: 489, fontSize: 7, expandedX: 10, expandedY: -89 }
+							// ],
+							// [
+							// 	{ text: 'Real wage', filterable: ['Inflation'], x: 755, y: 470, fontSize: 7, expandedX: -45, expandedY: -120 },
+							// 	{ text: 'decline', filterable: ['Inflation'], x: 755, y: 477, fontSize: 7, expandedX: -45, expandedY: -116 }
+							// ]
 						]
 					]
 				])
@@ -259,8 +350,8 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 								{ text: 'forums', filterable: [], x: 655, y: 761, fontSize: 6, expandedX: -55, expandedY: 9 }
 							],
 							[
-								{ text: 'Language', filterable: [], x: 655, y: 775, fontSize: 6, expandedX: 25, expandedY: -5 },
-								{ text: 'programs', filterable: [], x: 655, y: 781, fontSize: 6, expandedX: 25, expandedY: -1 }
+								{ text: 'Social', filterable: [], x: 655, y: 775, fontSize: 6, expandedX: 25, expandedY: -5 },
+								{ text: 'Integration', filterable: [], x: 650, y: 781, fontSize: 6, expandedX: 25, expandedY: -1 }
 							]
 						]
 					],
@@ -268,24 +359,20 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Public discourse', filterable: [], x: 630, y: 680, fontSize: 6, expandedX: -30, expandedY: 10 },
-								{ text: 'quality', filterable: [], x: 630, y: 686, fontSize: 6, expandedX: -30, expandedY: 14 }
+								{ text: 'General', filterable: [], x: 630, y: 690, fontSize: 6, expandedX: -35, expandedY: 20 },
+								{ text: 'Connection', filterable: [], x: 630, y: 696, fontSize: 6, expandedX: -35, expandedY: 24 }
 							],
 							[
-								{ text: 'Intergenerational', filterable: [], x: 617, y: 705, fontSize: 6, expandedX: -35, expandedY: 20 },
-								{ text: 'mobility', filterable: [], x: 617, y: 711, fontSize: 6, expandedX: -35, expandedY: 24 }
+								{ text: 'Civil society', filterable: [], x: 620, y: 715, fontSize: 6, expandedX: 50, expandedY: 10 },
+								{ text: 'strength', filterable: [], x: 620, y: 721, fontSize: 6, expandedX: 50, expandedY: 14 }
 							],
 							[
-								{ text: 'Civil society', filterable: [], x: 610, y: 725, fontSize: 6, expandedX: 50, expandedY: 10 },
-								{ text: 'strength', filterable: [], x: 610, y: 731, fontSize: 6, expandedX: 50, expandedY: 14 }
+								{ text: 'Cultural heritage', filterable: [], x: 600, y: 740, fontSize: 6, expandedX: -20, expandedY: 15 },
+								{ text: 'preservation', filterable: [], x: 600, y: 746, fontSize: 6, expandedX: -20, expandedY: 19 }
 							],
 							[
-								{ text: 'Cultural heritage', filterable: [], x: 600, y: 750, fontSize: 6, expandedX: -20, expandedY: 15 },
-								{ text: 'preservation', filterable: [], x: 600, y: 756, fontSize: 6, expandedX: -20, expandedY: 19 }
-							],
-							[
-								{ text: 'Inclusive', filterable: [], x: 605, y: 775, fontSize: 6, expandedX: 70, expandedY: -5 },
-								{ text: 'culture', filterable: [], x: 605, y: 781, fontSize: 6, expandedX: 70, expandedY: -1 }
+								{ text: 'Inclusive', filterable: [], x: 605, y: 765, fontSize: 6, expandedX: 70, expandedY: -5 },
+								{ text: 'culture', filterable: [], x: 605, y: 771, fontSize: 6, expandedX: 70, expandedY: -1 }
 							]
 						]
 					],
@@ -293,16 +380,14 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'Religion', filterable: [], x: 553, y: 775, fontSize: 7, expandedX: 85, expandedY: -15 },
-								{ text: 'education', filterable: [], x: 553, y: 782, fontSize: 7, expandedX: 85, expandedY: -11 }
+								{ text: 'Social', filterable: [], x: 555, y: 760, fontSize: 7, expandedX: 85, expandedY: -15 },
+								{ text: 'Development', filterable: [], x: 545, y: 767, fontSize: 7, expandedX: 85, expandedY: -11 },
+								{ text: 'Balance', filterable: [], x: 553, y: 774, fontSize: 7, expandedX: 85, expandedY: -11 }
 							],
 							[
-								{ text: 'Civic', filterable: [], x: 560, y: 733, fontSize: 7, expandedX: 10, expandedY: 10 },
-								{ text: 'education', filterable: [], x: 555, y: 740, fontSize: 7, expandedX: 10, expandedY: 14 }
-							],
-							[
-								{ text: 'Global', filterable: [], x: 575, y: 690, fontSize: 7, expandedX: 85, expandedY: 20 },
-								{ text: 'awareness', filterable: [], x: 570, y: 697, fontSize: 7, expandedX: 85, expandedY: 24 }
+								{ text: 'Social', filterable: [], x: 565, y: 705, fontSize: 7, expandedX: 10, expandedY: 10 },
+								{ text: 'Cohesion', filterable: [], x: 560, y: 712, fontSize: 7, expandedX: 10, expandedY: 14 },
+								{ text: 'Framework', filterable: [], x: 560, y: 719, fontSize: 7, expandedX: 10, expandedY: 14 }
 							],
 							[
 								{ text: 'National', filterable: [], x: 595, y: 650, fontSize: 7, expandedX: -5, expandedY: 20 },
@@ -343,16 +428,19 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Cost', filterable: [], x: 350, y: 710, fontSize: 7 },
-								{ text: 'barriers', filterable: [], x: 350, y: 717, fontSize: 7 }
+								{ text: 'Social', filterable: [], x: 345, y: 710, fontSize: 7 },
+								{ text: 'participation', filterable: [], x: 345, y: 717, fontSize: 7 },
+								{ text: 'decline', filterable: [], x: 345, y: 724, fontSize: 7 }
 							],
 							[
-								{ text: 'Limited', filterable: [], x: 360, y: 740, fontSize: 7 },
-								{ text: 'access', filterable: [], x: 360, y: 747, fontSize: 7 }
+								{ text: 'Community', filterable: [], x: 356, y: 740, fontSize: 7 },
+								{ text: 'program', filterable: [], x: 360, y: 747, fontSize: 7 },
+								{ text: 'volume', filterable: [], x: 360, y: 754, fontSize: 7 }
 							],
 							[
-								{ text: 'Lack of', filterable: [], x: 365, y: 770, fontSize: 7 },
-								{ text: 'participation', filterable: [], x: 365, y: 777, fontSize: 7 }
+								{ text: 'Social', filterable: [], x: 365, y: 770, fontSize: 7 },
+								{ text: 'integration', filterable: [], x: 365, y: 777, fontSize: 7 },
+								{ text: 'barriers', filterable: [], x: 365, y: 784, fontSize: 7 }
 							]
 						]
 					],
@@ -360,12 +448,18 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Generation', filterable: [], x: 395, y: 700, fontSize: 7, expandedX: -10, expandedY: 0 },
-								{ text: 'differences', filterable: [], x: 395, y: 707, fontSize: 7, expandedX: -10, expandedY: 4 }
+								{ text: 'Generation', filterable: [], x: 385, y: 690, fontSize: 7, expandedX: -10, expandedY: 0 },
+								{ text: 'differences', filterable: [], x: 385, y: 697, fontSize: 7, expandedX: -10, expandedY: 4 }
 							],
 							[
-								{ text: 'School', filterable: [], x: 420, y: 760, fontSize: 7, expandedX: -20, expandedY: -10 },
-								{ text: 'culture', filterable: [], x: 420, y: 767, fontSize: 7, expandedX: -20, expandedY: -6 }
+								{ text: 'Social', filterable: [], x: 410, y: 730, fontSize: 7, expandedX: -20, expandedY: -10 },
+								{ text: 'Mobility', filterable: [], x: 410, y: 737, fontSize: 7, expandedX: -20, expandedY: -6 },
+								{ text: 'Systems', filterable: [], x: 410, y: 744, fontSize: 7, expandedX: -20, expandedY: -6 }
+							],
+							[
+								{ text: 'Community', filterable: [], x: 415, y: 765, fontSize: 7, expandedX: -20, expandedY: -10 },
+								{ text: 'bond', filterable: [], x: 415, y: 772, fontSize: 7, expandedX: -20, expandedY: -6 },
+								{ text: 'deterioration', filterable: [], x: 415, y: 779, fontSize: 7, expandedX: -20, expandedY: -6 }
 							]
 						]
 					],
@@ -373,23 +467,19 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'Lack of', filterable: [], x: 420, y: 640, fontSize: 7, expandedX: -20, expandedY: 20 },
-								{ text: 'long-term', filterable: [], x: 420, y: 647, fontSize: 7, expandedX: -20, expandedY: 24 },
-								{ text: 'planning', filterable: [], x: 420, y: 654, fontSize: 7, expandedX: -20, expandedY: 28 }
+								{ text: 'Cultural', filterable: [], x: 425, y: 650, fontSize: 7, expandedX: -20, expandedY: 20 },
+								{ text: 'identity', filterable: [], x: 425, y: 657, fontSize: 7, expandedX: -20, expandedY: 24 },
+								{ text: 'erosion', filterable: [], x: 425, y: 664, fontSize: 7, expandedX: -20, expandedY: 28 }
 							],
 							[
-								{ text: 'Short', filterable: [], x: 450, y: 685, fontSize: 7, expandedX: -110, expandedY: 50 },
-								{ text: 'term', filterable: [], x: 450, y: 692, fontSize: 7, expandedX: -110, expandedY: 54 },
-								{ text: 'solutions', filterable: [], x: 450, y: 699, fontSize: 7, expandedX: -110, expandedY: 58 }
+								{ text: 'Social', filterable: [], x: 458, y: 706, fontSize: 7, expandedX: -110, expandedY: 50 },
+								{ text: 'cohesion', filterable: [], x: 458, y: 713, fontSize: 7, expandedX: -110, expandedY: 54 },
+								{ text: 'weakening', filterable: [], x: 458, y: 720, fontSize: 7, expandedX: -110, expandedY: 58 }
 							],
 							[
-								{ text: 'Gaps in', filterable: [], x: 458, y: 725, fontSize: 7, expandedX: -20, expandedY: -10 },
-								{ text: 'non-direct', filterable: [], x: 458, y: 732, fontSize: 7, expandedX: -20, expandedY: -7 },
-								{ text: 'educational', filterable: [], x: 458, y: 739, fontSize: 7, expandedX: -20, expandedY: -4 },
-								{ text: 'skills', filterable: [], x: 465, y: 746, fontSize: 7, expandedX: -20, expandedY: -1 }
-							],
-							[
-								{ text: 'Discrimination', filterable: [], x: 463, y: 780, fontSize: 7, expandedX: -40, expandedY: 0 }
+								{ text: 'Social', filterable: [], x: 470, y: 756, fontSize: 7, expandedX: -20, expandedY: -10 },
+								{ text: 'development', filterable: [], x: 463, y: 763, fontSize: 7, expandedX: -20, expandedY: -7 },
+								{ text: 'imbalance', filterable: [], x: 465, y: 770, fontSize: 7, expandedX: -20, expandedY: -4 },
 							]
 						]
 					],
@@ -449,8 +539,8 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 								{ text: 'facilities', filterable: ['Inflation'], x: 675, y: 842, fontSize: 6, textAnchor: 'middle', expandedX: 35, expandedY: -7 }
 							],
 							[
-								{ text: 'Access to', filterable: [], x: 685, y: 865, fontSize: 6, textAnchor: 'middle', expandedX: -40, expandedY: 0 },
-								{ text: 'programs', filterable: [], x: 685, y: 871, fontSize: 6, textAnchor: 'middle', expandedX: -40, expandedY: 4 }
+								{ text: 'Technology', filterable: [], x: 685, y: 865, fontSize: 6, textAnchor: 'middle', expandedX: -40, expandedY: 0 },
+								{ text: 'Integration', filterable: [], x: 685, y: 871, fontSize: 6, textAnchor: 'middle', expandedX: -40, expandedY: 4 }
 							]
 						]
 					],
@@ -462,13 +552,16 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 								{ text: 'quality', filterable: [], x: 595, y: 807, fontSize: 7, expandedX: -10, expandedY: 24 }
 							],
 							[
-								{ text: 'School', filterable: [], x: 605, y: 840, fontSize: 7, expandedX: 60, expandedY: -20 },
-								{ text: 'performance', filterable: [], x: 605, y: 847, fontSize: 7, expandedX: 60, expandedY: -16 },
-								{ text: 'scores', filterable: [], x: 605, y: 854, fontSize: 7, expandedX: 60, expandedY: -12 }
+								{ text: 'Assessment', filterable: [], x: 600, y: 830, fontSize: 7, expandedX: 60, expandedY: -20 },
+								{ text: 'Standards', filterable: [], x: 600, y: 837, fontSize: 7, expandedX: 60, expandedY: -16 }
 							],
 							[
-								{ text: 'Innovative', filterable: [], x: 625, y: 880, fontSize: 7, expandedX: -20, expandedY: -10 },
-								{ text: 'methods', filterable: [], x: 625, y: 887, fontSize: 7, expandedX: -20, expandedY: -6 }
+								{ text: 'Curriculum', filterable: [], x: 610, y: 860, fontSize: 7, expandedX: 60, expandedY: -20 },
+								{ text: 'Development', filterable: [], x: 610, y: 867, fontSize: 7, expandedX: 60, expandedY: -16 }
+							],
+							[
+								{ text: 'Innovative', filterable: [], x: 630, y: 890, fontSize: 7, expandedX: -20, expandedY: -10 },
+								{ text: 'methods', filterable: [], x: 635, y: 897, fontSize: 7, expandedX: -20, expandedY: -6 }
 							]
 						]
 					],
@@ -476,7 +569,7 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'Educational', filterable: ['Inflation'], x: 550, y: 800, fontSize: 7, expandedX: 90, expandedY: 5 },
+								{ text: 'Educational', filterable: ['Inflation'], x: 547, y: 800, fontSize: 7, expandedX: 90, expandedY: 5 },
 								{ text: 'expense', filterable: ['Inflation'], x: 550, y: 807, fontSize: 7, expandedX: 90, expandedY: 9 }
 							],
 							[
@@ -491,10 +584,10 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 								{ text: 'орчин', filterable: ['Inflation'], x: 565, y: 887, fontSize: 7, expandedX: 25, expandedY: 34 }
 							],
 							[
-								{ text: 'Ерөнхий', filterable: [], x: 585, y: 905, fontSize: 7, expandedX: 60, expandedY: -65 },
-								{ text: 'боловсролын', filterable: [], x: 585, y: 912, fontSize: 7, expandedX: 60, expandedY: -61 },
-								{ text: 'сургуулийн', filterable: [], x: 585, y: 919, fontSize: 7, expandedX: 60, expandedY: -57 },
-								{ text: 'тоо', filterable: [], x: 585, y: 926, fontSize: 7, expandedX: 60, expandedY: -53 }
+								{ text: 'Ерөнхий', filterable: [], x: 585, y: 910, fontSize: 7, expandedX: 60, expandedY: -65 },
+								{ text: 'боловсролын', filterable: [], x: 580, y: 917, fontSize: 7, expandedX: 60, expandedY: -61 },
+								{ text: 'сургуулийн', filterable: [], x: 585, y: 923, fontSize: 7, expandedX: 60, expandedY: -57 },
+								{ text: 'тоо', filterable: [], x: 600, y: 930, fontSize: 7, expandedX: 60, expandedY: -53 }
 							]
 						]
 					],
@@ -516,10 +609,15 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Traditional-only', filterable: [], x: 312, y: 808, fontSize: 6, expandedX: 20, expandedY: 10 },
-								{ text: 'learning space', filterable: [], x: 312, y: 814, fontSize: 6, expandedX: 20, expandedY: 14 },
-								{ text: '& Lack of', filterable: [], x: 312, y: 820, fontSize: 6, expandedX: 20, expandedY: 18 },
-								{ text: 'accessibility', filterable: [], x: 312, y: 826, fontSize: 6, expandedX: 20, expandedY: 22 }
+								{ text: 'Educational', filterable: [], x: 315, y: 800, fontSize: 6, expandedX: 20, expandedY: 10 },
+								{ text: 'resource', filterable: [], x: 315, y: 806, fontSize: 6, expandedX: 20, expandedY: 14 },
+								{ text: 'scarcity', filterable: [], x: 315, y: 812, fontSize: 6, expandedX: 20, expandedY: 14 },
+							],
+							[
+
+								{ text: 'Learning', filterable: [], x: 310, y: 830, fontSize: 6, expandedX: 20, expandedY: 18 },
+								{ text: 'support', filterable: [], x: 310, y: 836, fontSize: 6, expandedX: 20, expandedY: 18 },
+								{ text: 'inadequacy', filterable: [], x: 310, y: 842, fontSize: 6, expandedX: 20, expandedY: 22 }
 							]
 						]
 					],
@@ -527,10 +625,20 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Dropout rate', filterable: [], x: 362, y: 815, fontSize: 7 }
+								{ text: 'Dropout rate', filterable: [], x: 362, y: 800, fontSize: 7 }
 							],
 							[
-								{ text: 'Limited access', filterable: [], x: 350, y: 850, fontSize: 7 }
+								{ text: 'Technology', filterable: [], x: 362, y: 815, fontSize: 7 },
+								{ text: 'integration', filterable: [], x: 362, y: 822, fontSize: 7 },
+								{ text: 'barriers', filterable: [], x: 362, y: 829, fontSize: 7 }
+							],
+							[
+								{ text: 'Limited access', filterable: [], x: 345, y: 850, fontSize: 7 }
+							],
+							[
+								{ text: 'Educational', filterable: [], x: 340, y: 865, fontSize: 7 },
+								{ text: 'infrastructure', filterable: [], x: 340, y: 872, fontSize: 7 },
+								{ text: 'gaps', filterable: [], x: 350, y: 879, fontSize: 7 }
 							]
 						]
 					],
@@ -538,13 +646,16 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Internet', filterable: [], x: 415, y: 810, fontSize: 7, expandedX: -20, expandedY: 0 },
-								{ text: 'penetration', filterable: [], x: 415, y: 817, fontSize: 7, expandedX: -20, expandedY: 4 }
+								{ text: 'Quality', filterable: [], x: 425, y: 810, fontSize: 7, expandedX: -20, expandedY: 0 },
+								{ text: 'gaps', filterable: [], x: 425, y: 817, fontSize: 7, expandedX: -20, expandedY: 4 }
 							],
 							[
-								{ text: 'Study materials', filterable: [], x: 395, y: 870, fontSize: 7, expandedX: -30, expandedY: -20 },
-								{ text: 'and content', filterable: [], x: 395, y: 877, fontSize: 7, expandedX: -30, expandedY: -16 },
-								{ text: 'upgrade', filterable: [], x: 395, y: 884, fontSize: 7, expandedX: -30, expandedY: -12 }
+								{ text: 'Assessment', filterable: [], x: 405, y: 850, fontSize: 7, expandedX: -30, expandedY: -20 },
+								{ text: 'system flaws', filterable: [], x: 400, y: 857, fontSize: 7, expandedX: -30, expandedY: -16 },
+							],
+							[
+								{ text: 'Curriculum', filterable: [], x: 385, y: 890, fontSize: 7, expandedX: -30, expandedY: -20 },
+								{ text: 'outdatedness', filterable: [], x: 380, y: 897, fontSize: 7, expandedX: -30, expandedY: -16 },
 							]
 						]
 					],
@@ -592,9 +703,13 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Accessibility', filterable: [], x: 788, y: 819, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 60 },
-								{ text: 'of Government', filterable: [], x: 788, y: 823, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 65 },
-								{ text: 'Services', filterable: [], x: 788, y: 827, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 70 }
+								{ text: 'Civil', filterable: [], x: 788, y: 810, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 60 },
+								{ text: 'Rights', filterable: [], x: 788, y: 814, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 65 },
+								{ text: 'Protection', filterable: [], x: 788, y: 818, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 70 }
+							],
+							[
+								{ text: 'Public Service', filterable: [], x: 788, y: 829, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 60 },
+								{ text: 'Access', filterable: [], x: 788, y: 833, fontSize: 4, textAnchor: 'end', expandedX: -10, expandedY: 65 },
 							]
 						]
 					],
@@ -602,12 +717,22 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Housing Program', filterable: [], x: 750, y: 848, fontSize: 5, expandedX: -55, expandedY: 80 },
-								{ text: 'Effectiveness', filterable: [], x: 750, y: 853, fontSize: 5, expandedX: -55, expandedY: 85 }
+								{ text: 'Administrative', filterable: [], x: 753, y: 844, fontSize: 5, expandedX: -55, expandedY: 80 },
+								{ text: 'Support', filterable: [], x: 768, y: 848, fontSize: 5, expandedX: -55, expandedY: 85 }
 							],
 							[
-								{ text: 'Equity in social', filterable: [], x: 750, y: 865, fontSize: 5, expandedX: -35, expandedY: 15 },
-								{ text: 'welfare', filterable: [], x: 750, y: 870, fontSize: 5, expandedX: -35, expandedY: 19 }
+								{ text: 'Legal', filterable: [], x: 760, y: 855, fontSize: 5, expandedX: -35, expandedY: 15 },
+								{ text: 'Protection', filterable: [], x: 760, y: 860, fontSize: 5, expandedX: -35, expandedY: 19 },
+								{ text: 'Systems', filterable: [], x: 760, y: 865, fontSize: 5, expandedX: -35, expandedY: 19 }
+							],
+							[
+								{ text: 'Public', filterable: [], x: 732, y: 858, fontSize: 5, expandedX: -35, expandedY: 15 },
+								{ text: 'Service', filterable: [], x: 732, y: 863, fontSize: 5, expandedX: -35, expandedY: 19 },
+								{ text: 'Access', filterable: [], x: 732, y: 868, fontSize: 5, expandedX: -35, expandedY: 19 }
+							],
+							[
+								{ text: 'Service', filterable: [], x: 760, y: 875, fontSize: 5, expandedX: -35, expandedY: 15 },
+								{ text: 'Integration', filterable: [], x: 760, y: 880, fontSize: 5, expandedX: -35, expandedY: 19 },
 							]
 						]
 					],
@@ -615,11 +740,24 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Disaster Preparedness', filterable: [], x: 705, y: 895, fontSize: 6, expandedX: -30, expandedY: 55 }
+								{ text: 'Emergency', filterable: [], x: 705, y: 882, fontSize: 6, expandedX: -30, expandedY: 55 },
+								{ text: 'Management', filterable: [], x: 705, y: 888, fontSize: 6, expandedX: -30, expandedY: 55 },
+								{ text: 'Systems', filterable: [], x: 705, y: 894, fontSize: 6, expandedX: -30, expandedY: 55 }
 							],
 							[
-								{ text: 'Local Governance', filterable: [], x: 735, y: 910, fontSize: 6, expandedX: -35, expandedY: -10 },
-								{ text: 'Transparency', filterable: [], x: 735, y: 916, fontSize: 6, expandedX: -35, expandedY: -7 }
+								{ text: 'Local', filterable: [], x: 771, y: 895, fontSize: 6, expandedX: -35, expandedY: -10 },
+								{ text: 'Governance', filterable: [], x: 752, y: 901, fontSize: 6, expandedX: -35, expandedY: -7 },
+								{ text: 'Transparency', filterable: [], x: 748, y: 907, fontSize: 6, expandedX: -35, expandedY: -7 }
+							],
+							[
+								{ text: 'Local', filterable: [], x: 715, y: 905, fontSize: 6, expandedX: -35, expandedY: -10 },
+								{ text: 'Resource', filterable: [], x: 715, y: 911, fontSize: 6, expandedX: -35, expandedY: -7 },
+								{ text: 'Management', filterable: [], x: 715, y: 917, fontSize: 6, expandedX: -35, expandedY: -7 }
+							],
+							[
+								{ text: 'Public', filterable: [], x: 765, y: 920, fontSize: 6, expandedX: -35, expandedY: -10 },
+								{ text: 'Service', filterable: [], x: 765, y: 926, fontSize: 6, expandedX: -35, expandedY: -7 },
+								{ text: 'Delivery', filterable: [], x: 765, y: 932, fontSize: 6, expandedX: -35, expandedY: -7 }
 							]
 						]
 					],
@@ -627,16 +765,21 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Inclusivity in National', filterable: [], x: 660, y: 930, fontSize: 6, expandedX: 15, expandedY: 0 },
-								{ text: 'Decision-Making', filterable: [], x: 660, y: 936, fontSize: 6, expandedX: 15, expandedY: 4 }
+								{ text: 'Policy', filterable: [], x: 670, y: 920, fontSize: 6, expandedX: 15, expandedY: 0 },
+								{ text: 'Implementation', filterable: [], x: 670, y: 926, fontSize: 6, expandedX: 15, expandedY: 4 },
+								{ text: 'Systems', filterable: [], x: 670, y: 932, fontSize: 6, expandedX: 15, expandedY: 4 }
 							],
 							[
-								{ text: 'Anti-Corruption', filterable: [], x: 690, y: 950, fontSize: 6, expandedX: 15, expandedY: -60 },
-								{ text: 'Measures', filterable: [], x: 690, y: 956, fontSize: 6, expandedX: 15, expandedY: -56 }
+								{ text: 'Anti-Corruption', filterable: [], x: 680, y: 945, fontSize: 6, expandedX: 15, expandedY: -60 },
+								{ text: 'Measures', filterable: [], x: 680, y: 951, fontSize: 6, expandedX: 15, expandedY: -56 }
 							],
 							[
-								{ text: 'Quality of Legislative', filterable: [], x: 730, y: 965, fontSize: 6, expandedX: -50, expandedY: 10 },
-								{ text: 'Oversight', filterable: [], x: 730, y: 971, fontSize: 6, expandedX: -30, expandedY: 14 }
+								{ text: 'Administrative', filterable: [], x: 710, y: 955, fontSize: 6, expandedX: -50, expandedY: 10 },
+								{ text: 'Efficiency', filterable: [], x: 710, y: 961, fontSize: 6, expandedX: -30, expandedY: 14 }
+							],
+							[
+								{ text: 'Decentralization', filterable: [], x: 740, y: 970, fontSize: 6, expandedX: -50, expandedY: 10 },
+								{ text: 'Effectiveness', filterable: [], x: 740, y: 976, fontSize: 6, expandedX: -30, expandedY: 14 }
 							]
 						]
 					],
@@ -644,20 +787,21 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'Decentralization', filterable: [], x: 630, y: 963, fontSize: 7, expandedX: 80, expandedY: -80 },
-								{ text: 'Effectiveness', filterable: [], x: 630, y: 970, fontSize: 7, expandedX: 80, expandedY: -76 }
+								{ text: 'Quality of', filterable: [], x: 630, y: 963, fontSize: 7, expandedX: 80, expandedY: -80 },
+								{ text: 'Legislative', filterable: [], x: 630, y: 970, fontSize: 7, expandedX: 80, expandedY: -76 },
+								{ text: 'Oversight', filterable: [], x: 630, y: 977, fontSize: 7, expandedX: 80, expandedY: -76 }
 							],
 							[
-								{ text: 'Judicial Independence', filterable: [], x: 650, y: 985, fontSize: 7, expandedX: 30, expandedY: -70 },
-								{ text: 'and Rule of Law', filterable: [], x: 650, y: 992, fontSize: 7, expandedX: 30, expandedY: -66 }
+								{ text: 'Judicial Independence', filterable: [], x: 650, y: 988, fontSize: 7, expandedX: 30, expandedY: -70 },
+								{ text: 'and Rule of Law', filterable: [], x: 650, y: 995, fontSize: 7, expandedX: 30, expandedY: -66 }
 							],
 							[
-								{ text: 'Fiscal Accountability', filterable: [], x: 720, y: 998, fontSize: 7, expandedX: -70, expandedY: -40 },
-								{ text: 'and Transparency', filterable: [], x: 720, y: 1005, fontSize: 7, expandedX: -70, expandedY: -36 }
+								{ text: 'Fiscal Accountability', filterable: [], x: 715, y: 998, fontSize: 7, expandedX: -70, expandedY: -40 },
+								{ text: 'and Transparency', filterable: [], x: 715, y: 1005, fontSize: 7, expandedX: -70, expandedY: -36 }
 							],
 							[
-								{ text: 'Long-Term', filterable: [], x: 730, y: 1020, fontSize: 7, expandedX: -20, expandedY: -20 },
-								{ text: 'Strategic Planning', filterable: [], x: 730, y: 1027, fontSize: 7, expandedX: -40, expandedY: -16 }
+								{ text: 'Long-Term', filterable: [], x: 725, y: 1020, fontSize: 7, expandedX: -20, expandedY: -20 },
+								{ text: 'Strategic Planning', filterable: [], x: 725, y: 1027, fontSize: 7, expandedX: -40, expandedY: -16 }
 							]
 						]
 					],
@@ -670,8 +814,12 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Voters', filterable: [], x: 767, y: 1284, fontSize: 6, expandedX: -40, expandedY: -70 },
-								{ text: 'suppression', filterable: [], x: 754, y: 1290, fontSize: 6, expandedX: -40, expandedY: -66 }
+								{ text: 'Rights', filterable: [], x: 767, y: 1297, fontSize: 5, expandedX: -40, expandedY: -70 },
+								{ text: 'Violation', filterable: [], x: 767, y: 1302, fontSize: 5, expandedX: -40, expandedY: -66 }
+							],
+							[
+								{ text: 'Civic Rights', filterable: [], x: 760, y: 1284, fontSize: 5, expandedX: -40, expandedY: -70 },
+								{ text: 'Suppression', filterable: [], x: 760, y: 1289, fontSize: 5, expandedX: -40, expandedY: -66 }
 							]
 						]
 					],
@@ -679,13 +827,18 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Wrongful', filterable: [], x: 740, y: 1256, fontSize: 7, expandedX: -40, expandedY: -80 },
-								{ text: 'detention', filterable: [], x: 740, y: 1263, fontSize: 7, expandedX: -40, expandedY: -76 },
-								{ text: 'rates', filterable: [], x: 740, y: 1270, fontSize: 7, expandedX: -40, expandedY: -72 }
+								{ text: 'Service', filterable: [], x: 735, y: 1264, fontSize: 6, expandedX: -40, expandedY: -80 },
+								{ text: 'Fragmentation', filterable: [], x: 735, y: 1270, fontSize: 6, expandedX: -40, expandedY: -76 },
 							],
 							[
-								{ text: 'Lack of', filterable: [], x: 786, y: 1235, fontSize: 7, expandedX: -70, expandedY: -10 },
-								{ text: 'representation', filterable: [], x: 786, y: 1242, fontSize: 7, expandedX: -70, expandedY: -6 }
+								{ text: 'Legal', filterable: [], x: 737, y: 1242, fontSize: 6, expandedX: -70, expandedY: -10 },
+								{ text: 'Protection', filterable: [], x: 737, y: 1248, fontSize: 6, expandedX: -70, expandedY: -6 },
+								{ text: 'Failures', filterable: [], x: 737, y: 1254, fontSize: 6, expandedX: -70, expandedY: -6 }
+							],
+							[
+								{ text: 'Service', filterable: [], x: 766, y: 1230, fontSize: 6, expandedX: -70, expandedY: -10 },
+								{ text: 'Access', filterable: [], x: 766, y: 1236, fontSize: 6, expandedX: -70, expandedY: -6 },
+								{ text: 'Barriers', filterable: [], x: 766, y: 1242, fontSize: 6, expandedX: -70, expandedY: -6 }
 							]
 						]
 					],
@@ -693,21 +846,18 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Funding shortages', filterable: [], x: 702, y: 1222, fontSize: 7, expandedX: -10, expandedY: -20 },
-								{ text: 'and lack of', filterable: [], x: 702, y: 1229, fontSize: 7, expandedX: -10, expandedY: -17 },
-								{ text: 'awareness', filterable: [], x: 702, y: 1236, fontSize: 7, expandedX: -10, expandedY: -14 }
+								{ text: 'Resource', filterable: [], x: 695, y: 1220, fontSize: 7, expandedX: -10, expandedY: -20 },
+								{ text: 'Mismanagement', filterable: [], x: 695, y: 1227, fontSize: 7, expandedX: -10, expandedY: -17 }
 							],
 							[
-								{ text: 'Lack of', filterable: [], x: 715, y: 1196, fontSize: 7, expandedX: 20, expandedY: 45 },
-								{ text: 'emergency', filterable: [], x: 715, y: 1203, fontSize: 7, expandedX: 20, expandedY: 48 },
-								{ text: 'plan', filterable: [], x: 715, y: 1210, fontSize: 7, expandedX: 20, expandedY: 51 }
+								{ text: 'Emergency', filterable: [], x: 715, y: 1196, fontSize: 7, expandedX: 20, expandedY: 45 },
+								{ text: 'Response', filterable: [], x: 715, y: 1203, fontSize: 7, expandedX: 20, expandedY: 48 },
+								{ text: 'problems', filterable: [], x: 715, y: 1210, fontSize: 7, expandedX: 20, expandedY: 51 }
 							],
 							[
-								{ text: 'Underreporting', filterable: [], x: 737, y: 1185, fontSize: 7, expandedX: -40, expandedY: -40 },
-								{ text: 'of crimes', filterable: [], x: 757, y: 1192, fontSize: 7, expandedX: -30, expandedY: -37 },
-								{ text: 'or lack of', filterable: [], x: 757, y: 1199, fontSize: 7, expandedX: -30, expandedY: -34 },
-								{ text: 'reporting', filterable: [], x: 757, y: 1206, fontSize: 7, expandedX: -30, expandedY: -31 },
-								{ text: 'channels', filterable: [], x: 757, y: 1213, fontSize: 7, expandedX: -30, expandedY: -28 }
+								{ text: 'Service', filterable: [], x: 757, y: 1185, fontSize: 7, expandedX: -40, expandedY: -40 },
+								{ text: 'Delivery', filterable: [], x: 757, y: 1192, fontSize: 7, expandedX: -30, expandedY: -37 },
+								{ text: 'Failures', filterable: [], x: 757, y: 1199, fontSize: 7, expandedX: -30, expandedY: -34 }
 							]
 						]
 					],
@@ -715,16 +865,16 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Bureaucratic red tape &', filterable: [], x: 657, y: 1180, fontSize: 7, expandedX: 15, expandedY: 20 },
-								{ text: 'technological gap', filterable: [], x: 657, y: 1187, fontSize: 7, expandedX: 30, expandedY: 24 }
+								{ text: 'Bureaucratic', filterable: [], x: 657, y: 1180, fontSize: 7, expandedX: 15, expandedY: 20 },
+								{ text: 'Inefficiency', filterable: [], x: 657, y: 1187, fontSize: 7, expandedX: 30, expandedY: 24 }
 							],
 							[
-								{ text: 'Incompatible systems &', filterable: [], x: 690, y: 1160, fontSize: 7, expandedX: -30, expandedY: 0 },
-								{ text: 'limited data sharing', filterable: [], x: 690, y: 1167, fontSize: 7, expandedX: -30, expandedY: 4 }
+								{ text: 'Implementation', filterable: [], x: 690, y: 1160, fontSize: 7, expandedX: -30, expandedY: 0 },
+								{ text: 'Gaps', filterable: [], x: 690, y: 1167, fontSize: 7, expandedX: -30, expandedY: 4 }
 							],
 							[
-								{ text: 'Political influence &', filterable: [], x: 717, y: 1142, fontSize: 7, expandedX: -25, expandedY: -20 },
-								{ text: 'inequitable distribution', filterable: [], x: 717, y: 1149, fontSize: 7, expandedX: -40, expandedY: -16 }
+								{ text: 'Power', filterable: [], x: 735, y: 1142, fontSize: 7, expandedX: -25, expandedY: -20 },
+								{ text: 'Concentration', filterable: [], x: 735, y: 1149, fontSize: 7, expandedX: -40, expandedY: -16 }
 							]
 						]
 					],
@@ -732,15 +882,16 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'Power concentration', filterable: [], x: 720, y: 1100, fontSize: 7, expandedX: -50, expandedY: 20 }
+								{ text: 'Injustice and', filterable: [], x: 735, y: 1100, fontSize: 7, expandedX: -50, expandedY: 20 },
+								{ text: 'Corruption', filterable: [], x: 735, y: 1107, fontSize: 7, expandedX: -50, expandedY: 20 }
 							],
 							[
-								{ text: 'Fragmented social', filterable: [], x: 670, y: 1115, fontSize: 7, expandedX: 0, expandedY: 50 },
-								{ text: 'support systems', filterable: [], x: 670, y: 1122, fontSize: 7, expandedX: 0, expandedY: 54 }
+								{ text: 'Fiscal', filterable: [], x: 685, y: 1115, fontSize: 7, expandedX: 0, expandedY: 50 },
+								{ text: 'Opacity', filterable: [], x: 685, y: 1122, fontSize: 7, expandedX: 0, expandedY: 54 }
 							],
 							[
-								{ text: 'Economic', filterable: [], x: 640, y: 1145, fontSize: 7, expandedX: 70, expandedY: 70 },
-								{ text: 'pressure', filterable: [], x: 640, y: 1152, fontSize: 7, expandedX: 70, expandedY: 74 }
+								{ text: 'Short term', filterable: [], x: 640, y: 1145, fontSize: 7, expandedX: 70, expandedY: 70 },
+								{ text: 'solutions', filterable: [], x: 640, y: 1152, fontSize: 7, expandedX: 70, expandedY: 74 }
 							]
 						]
 					],
@@ -758,9 +909,13 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Knowledge of', filterable: [], x: 792, y: 825, fontSize: 4, expandedX: 15, expandedY: 85 },
-								{ text: 'Rights and Legal', filterable: [], x: 792, y: 829, fontSize: 4, expandedX: 15, expandedY: 91 },
-								{ text: 'Protections', filterable: [], x: 792, y: 833, fontSize: 4, expandedX: 15, expandedY: 97 }
+								{ text: 'Voter', filterable: [], x: 792, y: 816, fontSize: 4, expandedX: 15, expandedY: 85 },
+								{ text: 'Participation', filterable: [], x: 792, y: 820, fontSize: 4, expandedX: 15, expandedY: 91 }
+							],
+							[
+								{ text: 'Social', filterable: [], x: 792, y: 827, fontSize: 4, expandedX: 5, expandedY: 65 },
+								{ text: 'responsibility', filterable: [], x: 792, y: 831, fontSize: 4, expandedX: 5, expandedY: 69 },
+								{ text: 'awareness', filterable: [], x: 792, y: 835, fontSize: 4, expandedX: 5, expandedY: 69 }
 							]
 						]
 					],
@@ -768,16 +923,18 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Local Safety', filterable: [], x: 795, y: 845, fontSize: 5, expandedX: 0, expandedY: 20 },
-								{ text: 'Measures', filterable: [], x: 795, y: 850, fontSize: 5, expandedX: 0, expandedY: 24 }
+								{ text: 'Family Support', filterable: [], x: 792, y: 850, fontSize: 5, expandedX: 0, expandedY: 20 },
+								{ text: 'Systems', filterable: [], x: 792, y: 855, fontSize: 5, expandedX: 0, expandedY: 24 }
 							],
 							[
-								{ text: 'Social network', filterable: [], x: 795, y: 860, fontSize: 5, expandedX: 5, expandedY: 42 },
-								{ text: 'engagement', filterable: [], x: 795, y: 865, fontSize: 5, expandedX: 5, expandedY: 46 }
+								{ text: 'Social', filterable: [], x: 795, y: 870, fontSize: 5, expandedX: 5, expandedY: 42 },
+								{ text: 'Welfare', filterable: [], x: 795, y: 875, fontSize: 5, expandedX: 5, expandedY: 46 },
+								{ text: 'Access', filterable: [], x: 795, y: 880, fontSize: 5, expandedX: 5, expandedY: 46 }
 							],
 							[
-								{ text: 'Social responsibility', filterable: [], x: 795, y: 875, fontSize: 5, expandedX: 5, expandedY: 65 },
-								{ text: 'awareness', filterable: [], x: 795, y: 880, fontSize: 5, expandedX: 5, expandedY: 69 }
+								{ text: 'Social', filterable: [], x: 825, y: 860, fontSize: 5, expandedX: 5, expandedY: 42 },
+								{ text: 'Protection', filterable: [], x: 825, y: 865, fontSize: 5, expandedX: 5, expandedY: 46 },
+								{ text: 'Coverage', filterable: [], x: 825, y: 870, fontSize: 5, expandedX: 5, expandedY: 46 }
 							]
 						]
 					],
@@ -785,13 +942,23 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Community', filterable: [], x: 793, y: 918, fontSize: 7, expandedX: 5, expandedY: -20 },
-								{ text: 'Infrastructure', filterable: [], x: 793, y: 925, fontSize: 7, expandedX: 5, expandedY: -16 },
-								{ text: 'Development', filterable: [], x: 793, y: 932, fontSize: 7, expandedX: 5, expandedY: -12 }
+								{ text: 'Community', filterable: [], x: 793, y: 922, fontSize: 5, expandedX: 5, expandedY: -20 },
+								{ text: 'Infrastructure', filterable: [], x: 793, y: 927, fontSize: 5, expandedX: 5, expandedY: -16 },
+								{ text: 'Development', filterable: [], x: 793, y: 932, fontSize: 5, expandedX: 5, expandedY: -12 }
 							],
 							[
-								{ text: 'Public Participation in', filterable: [], x: 810, y: 900, fontSize: 7, expandedX: -10, expandedY: 50 },
-								{ text: 'Local Governance', filterable: [], x: 810, y: 907, fontSize: 7, expandedX: -10, expandedY: 54 }
+								{ text: 'Public Participation in', filterable: [], x: 792, y: 900, fontSize: 5, expandedX: -10, expandedY: 50 },
+								{ text: 'Local Governance', filterable: [], x: 792, y: 905, fontSize: 5, expandedX: -10, expandedY: 54 }
+							],
+							[
+								{ text: 'Collective', filterable: [], x: 850, y: 900, fontSize: 5, expandedX: -10, expandedY: 50 },
+								{ text: 'action', filterable: [], x: 850, y: 905, fontSize: 5, expandedX: -10, expandedY: 54 },
+								{ text: 'capacity', filterable: [], x: 850, y: 910, fontSize: 5, expandedX: -10, expandedY: 54 }
+							],
+							[
+								{ text: 'Social', filterable: [], x: 827, y: 913, fontSize: 5, expandedX: -10, expandedY: 50 },
+								{ text: 'network', filterable: [], x: 827, y: 918, fontSize: 5, expandedX: -10, expandedY: 54 },
+								{ text: 'engagement', filterable: [], x: 827, y: 923, fontSize: 5, expandedX: -10, expandedY: 54 }
 							]
 						]
 					],
@@ -799,18 +966,24 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Social', filterable: [], x: 795, y: 960, fontSize: 7, expandedX: 10, expandedY: -70 },
-								{ text: 'cohesion', filterable: [], x: 795, y: 967, fontSize: 7, expandedX: 10, expandedY: -66 },
-								{ text: 'measures', filterable: [], x: 795, y: 974, fontSize: 7, expandedX: 10, expandedY: -62 }
+								{ text: 'Social', filterable: [], x: 793, y: 960, fontSize: 6, expandedX: 10, expandedY: -70 },
+								{ text: 'cohesion', filterable: [], x: 793, y: 966, fontSize: 6, expandedX: 10, expandedY: -66 },
+								{ text: 'measures', filterable: [], x: 793, y: 972, fontSize: 6, expandedX: 10, expandedY: -62 }
 							],
 							[
-								{ text: 'Collective', filterable: [], x: 830, y: 955, fontSize: 7, expandedX: -30, expandedY: 10 },
-								{ text: 'action', filterable: [], x: 830, y: 962, fontSize: 7, expandedX: -30, expandedY: 14 },
-								{ text: 'capacity', filterable: [], x: 830, y: 969, fontSize: 7, expandedX: -30, expandedY: 18 }
+								{ text: 'Minority', filterable: [], x: 826, y: 955, fontSize: 6, expandedX: -30, expandedY: 10 },
+								{ text: 'rights', filterable: [], x: 826, y: 961, fontSize: 6, expandedX: -30, expandedY: 14 },
+								{ text: 'protection', filterable: [], x: 826, y: 967, fontSize: 6, expandedX: -30, expandedY: 18 }
 							],
 							[
-								{ text: 'Public Trust in', filterable: [], x: 865, y: 940, fontSize: 7, expandedX: -10, expandedY: 5 },
-								{ text: 'Governance', filterable: [], x: 865, y: 947, fontSize: 7, expandedX: -10, expandedY: 9 }
+								{ text: 'Public', filterable: [], x: 854, y: 940, fontSize: 6, expandedX: -10, expandedY: 5 },
+								{ text: 'Trust in', filterable: [], x: 854, y: 947, fontSize: 6, expandedX: -10, expandedY: 5 },
+								{ text: 'Governance', filterable: [], x: 854, y: 954, fontSize: 6, expandedX: -10, expandedY: 9 }
+							],
+							[
+								{ text: 'Civil', filterable: [], x: 883, y: 930, fontSize: 6, expandedX: -10, expandedY: 5 },
+								{ text: 'society', filterable: [], x: 883, y: 936, fontSize: 6, expandedX: -10, expandedY: 5 },
+								{ text: 'engagement', filterable: [], x: 883, y: 942, fontSize: 6, expandedX: -10, expandedY: 9 }
 							]
 						]
 					],
@@ -818,16 +991,24 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'National social', filterable: [], x: 795, y: 1010, fontSize: 7, expandedX: 0, expandedY: -100 },
-								{ text: 'dialogue', filterable: [], x: 795, y: 1017, fontSize: 7, expandedX: 0, expandedY: -96 }
+								{ text: 'National', filterable: [], x: 795, y: 1010, fontSize: 6, expandedX: 0, expandedY: -100 },
+								{ text: 'social', filterable: [], x: 795, y: 1016, fontSize: 6, expandedX: 0, expandedY: -96 },
+								{ text: 'dialogue', filterable: [], x: 795, y: 1022, fontSize: 6, expandedX: 0, expandedY: -96 }
 							],
 							[
-								{ text: 'Minority rights', filterable: [], x: 850, y: 1000, fontSize: 7, expandedX: -40, expandedY: 0 },
-								{ text: 'protection', filterable: [], x: 850, y: 1007, fontSize: 7, expandedX: -40, expandedY: 4 }
+								{ text: 'Inclusivity in', filterable: [], x: 830, y: 1005, fontSize: 6, expandedX: -40, expandedY: 0 },
+								{ text: 'National', filterable: [], x: 830, y: 1011, fontSize: 6, expandedX: -40, expandedY: 4 },
+								{ text: 'Decision-Making', filterable: [], x: 830, y: 1017, fontSize: 6, expandedX: -40, expandedY: 4 }
 							],
 							[
-								{ text: 'Civil society', filterable: [], x: 890, y: 980, fontSize: 7, expandedX: -50, expandedY: -30 },
-								{ text: 'engagement', filterable: [], x: 890, y: 987, fontSize: 7, expandedX: -50, expandedY: -26 }
+								{ text: 'Social', filterable: [], x: 870, y: 990, fontSize: 6, expandedX: -50, expandedY: -30 },
+								{ text: 'Development', filterable: [], x: 870, y: 997, fontSize: 6, expandedX: -50, expandedY: -26 },
+								{ text: 'Framework', filterable: [], x: 870, y: 1004, fontSize: 6, expandedX: -50, expandedY: -26 }
+							],
+							[
+								{ text: 'National', filterable: [], x: 910, y: 970, fontSize: 6, expandedX: -50, expandedY: -30 },
+								{ text: 'Integration', filterable: [], x: 910, y: 977, fontSize: 6, expandedX: -50, expandedY: -26 },
+								{ text: 'Policy', filterable: [], x: 910, y: 984, fontSize: 6, expandedX: -50, expandedY: -26 }
 							]
 						]
 					],
@@ -840,8 +1021,14 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Civil rights', filterable: [], x: 792, y: 1285, fontSize: 6, expandedX: 10, expandedY: -70 },
-								{ text: 'violation', filterable: [], x: 792, y: 1291, fontSize: 6, expandedX: 10, expandedY: -66 }
+								{ text: 'Voter', filterable: [], x: 792, y: 1278, fontSize: 5, expandedX: 10, expandedY: -70 },
+								{ text: 'suppression', filterable: [], x: 792, y: 1283, fontSize: 5, expandedX: 10, expandedY: -66 }
+							],
+							[
+								{ text: 'Social', filterable: [], x: 792, y: 1292, fontSize: 5, expandedX: 10, expandedY: -70 },
+								{ text: 'Respon', filterable: [], x: 792, y: 1297, fontSize: 5, expandedX: 10, expandedY: -66 },
+								{ text: 'sibility', filterable: [], x: 792, y: 1302, fontSize: 5, expandedX: 10, expandedY: -66 },
+								{ text: 'Gaps', filterable: [], x: 792, y: 1307, fontSize: 5, expandedX: 10, expandedY: -66 }
 							]
 						]
 					],
@@ -849,8 +1036,19 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Financial', filterable: [], x: 810, y: 1250, fontSize: 7, expandedX: 0, expandedY: -60 },
-								{ text: 'dependency', filterable: [], x: 810, y: 1257, fontSize: 7, expandedX: 0, expandedY: -56 }
+								{ text: 'Welfare', filterable: [], x: 795, y: 1230, fontSize: 5, expandedX: 0, expandedY: -60 },
+								{ text: 'Access', filterable: [], x: 795, y: 1235, fontSize: 5, expandedX: 0, expandedY: -56 },
+								{ text: 'Barriers', filterable: [], x: 795, y: 1240, fontSize: 5, expandedX: 0, expandedY: -56 }
+							],
+							[
+								{ text: 'Housing', filterable: [], x: 795, y: 1255, fontSize: 5, expandedX: 0, expandedY: -60 },
+								{ text: 'Program', filterable: [], x: 795, y: 1260, fontSize: 5, expandedX: 0, expandedY: -56 },
+								{ text: 'Failures', filterable: [], x: 795, y: 1265, fontSize: 5, expandedX: 0, expandedY: -56 }
+							],
+							[
+								{ text: 'Family', filterable: [], x: 825, y: 1250, fontSize: 5, expandedX: 0, expandedY: -60 },
+								{ text: 'Support', filterable: [], x: 825, y: 1255, fontSize: 5, expandedX: 0, expandedY: -56 },
+								{ text: 'Breakdown', filterable: [], x: 825	, y: 1260, fontSize: 5, expandedX: 0, expandedY: -56 }
 							]
 						]
 					],
@@ -858,16 +1056,18 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Resource', filterable: [], x: 800, y: 1208, fontSize: 7, expandedX: 20, expandedY: -20 },
-								{ text: 'constraints', filterable: [], x: 800, y: 1215, fontSize: 7, expandedX: 20, expandedY: -16 }
+								{ text: 'Infrastructure', filterable: [], x: 795, y: 1190, fontSize: 7, expandedX: 20, expandedY: -20 },
+								{ text: 'Development', filterable: [], x: 795, y: 1197, fontSize: 7, expandedX: 20, expandedY: -16 },
+								{ text: 'Gaps', filterable: [], x: 795, y: 1204, fontSize: 7, expandedX: 20, expandedY: -16 }
 							],
 							[
-								{ text: 'Insufficient Accessibility', filterable: [], x: 795, y: 1197, fontSize: 7, expandedX: 0, expandedY: -40 }
+								{ text: 'Participation', filterable: [], x: 825, y: 1210, fontSize: 7, expandedX: 0, expandedY: -40 },
+								{ text: 'Barriers', filterable: [], x: 825, y: 1217, fontSize: 7, expandedX: 0, expandedY: -40 }
 							],
 							[
-								{ text: 'High cost and', filterable: [], x: 845, y: 1215, fontSize: 7, expandedX: -50, expandedY: 10 },
-								{ text: 'shortage of', filterable: [], x: 845, y: 1221, fontSize: 7, expandedX: -50, expandedY: 14 },
-								{ text: 'resource', filterable: [], x: 845, y: 1227, fontSize: 7, expandedX: -50, expandedY: 18 }
+								{ text: 'Collective', filterable: [], x: 855, y: 1220, fontSize: 7, expandedX: -50, expandedY: 10 },
+								{ text: 'Action', filterable: [], x: 855, y: 1227, fontSize: 7, expandedX: -50, expandedY: 14 },
+								{ text: 'Failure', filterable: [], x: 855, y: 1234, fontSize: 7, expandedX: -50, expandedY: 18 }
 							]
 						]
 					],
@@ -875,12 +1075,23 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Lack of support', filterable: [], x: 810, y: 1145, fontSize: 7, expandedX: 0, expandedY: 0 },
-								{ text: 'services', filterable: [], x: 810, y: 1152, fontSize: 7, expandedX: 0, expandedY: 4 }
+								{ text: 'Social', filterable: [], x: 795, y: 1134, fontSize: 6, expandedX: 0, expandedY: 0 },
+								{ text: 'Fragmentation', filterable: [], x: 795, y: 1140, fontSize: 6, expandedX: 0, expandedY: 4 }
 							],
 							[
-								{ text: 'Conflicting', filterable: [], x: 865, y: 1170, fontSize: 7, expandedX: -50, expandedY: 30 },
-								{ text: 'interest', filterable: [], x: 865, y: 1177, fontSize: 7, expandedX: -50, expandedY: 34 }
+								{ text: 'Minority', filterable: [], x: 815, y: 1155, fontSize: 6, expandedX: -50, expandedY: 30 },
+								{ text: 'Rights', filterable: [], x: 815, y: 1161, fontSize: 6, expandedX: -50, expandedY: 34 },
+								{ text: 'Violations', filterable: [], x: 815, y: 1167, fontSize: 6, expandedX: -50, expandedY: 34 }
+							],
+							[
+								{ text: 'Public', filterable: [], x: 855, y: 1150, fontSize: 6, expandedX: -50, expandedY: 30 },
+								{ text: 'Trust', filterable: [], x: 855, y: 1157, fontSize: 6, expandedX: -50, expandedY: 34 },
+								{ text: 'Deficit', filterable: [], x: 855, y: 1164, fontSize: 6, expandedX: -50, expandedY: 34 }
+							],
+							[
+								{ text: 'Civil', filterable: [], x: 880, y: 1175, fontSize: 6, expandedX: -50, expandedY: 30 },
+								{ text: 'Society', filterable: [], x: 880, y: 1181, fontSize: 6, expandedX: -50, expandedY: 34 },
+								{ text: 'Disengagement', filterable: [], x: 880, y: 1187, fontSize: 6, expandedX: -50, expandedY: 34 }
 							]
 						]
 					],
@@ -888,16 +1099,24 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'Centralized', filterable: [], x: 800, y: 1095, fontSize: 7, expandedX: 0, expandedY: 110 },
-								{ text: 'Control', filterable: [], x: 800, y: 1102, fontSize: 7, expandedX: 0, expandedY: 114 }
+								{ text: 'Social', filterable: [], x: 800, y: 1095, fontSize: 7, expandedX: 0, expandedY: 110 },
+								{ text: 'Dialogue', filterable: [], x: 800, y: 1102, fontSize: 7, expandedX: 0, expandedY: 114 },
+								{ text: 'Breakdown', filterable: [], x: 800, y: 1109, fontSize: 7, expandedX: 0, expandedY: 114 }
 							],
 							[
-								{ text: 'Rural neglects,', filterable: [], x: 850, y: 1110, fontSize: 7, expandedX: -50, expandedY: -10 },
-								{ text: 'overcrowding', filterable: [], x: 850, y: 1117, fontSize: 7, expandedX: -50, expandedY: -6 }
+								{ text: 'Exclusionary,', filterable: [], x: 845, y: 1100, fontSize: 7, expandedX: -50, expandedY: -10 },
+								{ text: 'Decision-', filterable: [], x: 845, y: 1107, fontSize: 7, expandedX: -50, expandedY: -6 },
+								{ text: 'Making', filterable: [], x: 845, y: 1114, fontSize: 7, expandedX: -50, expandedY: -6 }
 							],
 							[
-								{ text: 'Corruption', filterable: [], x: 910, y: 1140, fontSize: 7, expandedX: -80, expandedY: 20 },
-								{ text: 'perception', filterable: [], x: 910, y: 1147, fontSize: 7, expandedX: -80, expandedY: 24 }
+								{ text: 'Development', filterable: [], x: 880, y: 1120, fontSize: 7, expandedX: -80, expandedY: 20 },
+								{ text: 'Framework', filterable: [], x: 880, y: 1127, fontSize: 7, expandedX: -80, expandedY: 24 },
+								{ text: 'Failure', filterable: [], x: 880, y: 1134, fontSize: 7, expandedX: -80, expandedY: 24 }
+							],
+							[
+								{ text: 'Integration', filterable: [], x: 910, y: 1140, fontSize: 7, expandedX: -80, expandedY: 20 },
+								{ text: 'Policy', filterable: [], x: 910, y: 1147, fontSize: 7, expandedX: -80, expandedY: 24 },
+								{ text: 'Gaps', filterable: [], x: 910, y: 11454, fontSize: 7, expandedX: -80, expandedY: 24 }
 							]
 						]
 					],
@@ -915,13 +1134,17 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Personal mobility', filterable: [], x: 805, y: 795, fontSize: 4, expandedX: 55, expandedY: 10 },
-								{ text: 'access', filterable: [], x: 805, y: 799, fontSize: 4, expandedX: 55, expandedY: 15 }
+								{ text: 'Healthcare', filterable: [], x: 800, y: 795, fontSize: 4, expandedX: 55, expandedY: 10 },
+								{ text: 'Accessibility', filterable: [], x: 800, y: 799, fontSize: 4, expandedX: 55, expandedY: 15 }
 							],
 							[
-								{ text: 'Home', filterable: ['Inflation'], x: 815, y: 805, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 30 },
-								{ text: 'environment', filterable: ['Inflation'], x: 815, y: 809, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 35 },
-								{ text: 'quality', filterable: ['Inflation'], x: 815, y: 813, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 40 }
+								{ text: 'Clean', filterable: ['Inflation'], x: 825, y: 795, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 30 },
+								{ text: 'Water', filterable: ['Inflation'], x: 825, y: 799, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 35 },
+								{ text: 'Access', filterable: ['Inflation'], x: 825, y: 803, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 35 }
+							],
+							[
+								{ text: 'Air Quality', filterable: ['Inflation'], x: 815, y: 808, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 30 },
+								{ text: 'Exposure', filterable: ['Inflation'], x: 815, y: 812, fontSize: 4, props: 'Inflation', expandedX: 65, expandedY: 35 }
 							]
 						]
 					],
@@ -929,12 +1152,19 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Living conditions', filterable: [], x: 842, y: 800, fontSize: 6, expandedX: 20, expandedY: 5 },
-								{ text: 'quality', filterable: [], x: 842, y: 805, fontSize: 6, expandedX: 20, expandedY: 9 }
+								{ text: 'Health emergency', filterable: [], x: 842, y: 796, fontSize: 5, expandedX: 20, expandedY: 5 },
+								{ text: 'support', filterable: [], x: 842, y: 801, fontSize: 5, expandedX: 20, expandedY: 9 }
 							],
 							[
-								{ text: 'Sustainable', filterable: [], x: 835, y: 820, fontSize: 6, expandedX: 40, expandedY: 20 },
-								{ text: 'household habits', filterable: [], x: 835, y: 825, fontSize: 6, expandedX: 40, expandedY: 24 }
+								{ text: 'Environmental', filterable: [], x: 842, y: 810, fontSize: 5, expandedX: 40, expandedY: 20 },
+								{ text: 'Safety', filterable: [], x: 842, y: 815, fontSize: 5, expandedX: 40, expandedY: 24 }
+							],
+							[
+								{ text: 'Local Air Quality', filterable: [], x: 835, y: 823, fontSize: 5, expandedX: 40, expandedY: 20 },
+							],
+							[
+								{ text: 'Healthcare', filterable: [], x: 840, y: 832, fontSize: 5, expandedX: 40, expandedY: 20 },
+								{ text: 'Service Access', filterable: [], x: 840, y: 837, fontSize: 5, expandedX: 40, expandedY: 24 }
 							]
 						]
 					],
@@ -942,16 +1172,20 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Public safety', filterable: [], x: 895, y: 800, fontSize: 6, expandedX: -55, expandedY: 15 }
+								{ text: 'Local Healthcare', filterable: [], x: 895, y: 800, fontSize: 5, expandedX: -55, expandedY: 15 },
+								{ text: 'Access', filterable: [], x: 895, y: 805, fontSize: 5, expandedX: -55, expandedY: 15 }
 							],
 							[
-								{ text: 'Local', filterable: [], x: 892, y: 820, fontSize: 6, expandedX: 25, expandedY: -10 },
-								{ text: 'infrastructure', filterable: [], x: 892, y: 826, fontSize: 6, expandedX: 25, expandedY: -6 },
-								{ text: 'access', filterable: [], x: 892, y: 832, fontSize: 6, expandedX: 25, expandedY: -2 }
+								{ text: 'Environmental', filterable: [], x: 892, y: 820, fontSize: 5, expandedX: 25, expandedY: -10 },
+								{ text: 'Monitoring', filterable: [], x: 896, y: 825, fontSize: 5, expandedX: 25, expandedY: -6 },
 							],
 							[
-								{ text: 'Air and water', filterable: [], x: 868, y: 858, fontSize: 6, expandedX: 30, expandedY: 10 },
-								{ text: 'quality monitoring', filterable: [], x: 868, y: 864, fontSize: 6, expandedX: 20, expandedY: 14 }
+								{ text: 'Waste Management', filterable: [], x: 882, y: 840, fontSize: 5, expandedX: 30, expandedY: 10 },
+								{ text: 'Systems', filterable: [], x: 895, y: 845, fontSize: 5, expandedX: 20, expandedY: 14 }
+							],
+							[
+								{ text: 'Public Health', filterable: [], x: 880, y: 858, fontSize: 5, expandedX: 30, expandedY: 10 },
+								{ text: 'Facilities', filterable: [], x: 884, y: 864, fontSize: 5, expandedX: 20, expandedY: 14 }
 							]
 						]
 					],
@@ -959,22 +1193,29 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						4,
 						[
 							[
-								{ text: 'Management of', filterable: [], x: 945, y: 800, fontSize: 6, expandedX: -10, expandedY: 10 },
-								{ text: 'pasturelands', filterable: [], x: 945, y: 806, fontSize: 6, expandedX: -10, expandedY: 14 }
+								{ text: 'Climate Change', filterable: [], x: 942, y: 800, fontSize: 6, expandedX: -10, expandedY: 10 },
+								{ text: 'Adaptation', filterable: [], x: 945, y: 806, fontSize: 6, expandedX: -10, expandedY: 14 }
 							],
 							[
-								{ text: 'Utility grids', filterable: ['Inflation'], x: 940, y: 825, fontSize: 6, expandedX: -80, expandedY: -20 }
+								{ text: 'Pasturelands', filterable: ['Inflation'], x: 943, y: 820, fontSize: 6, expandedX: -80, expandedY: -20 },
+								{ text: 'care', filterable: ['Inflation'], x: 952, y: 826, fontSize: 6, expandedX: -80, expandedY: -20 }
 							],
 							[
-								{ text: 'Urban planning', filterable: [], x: 935, y: 845, fontSize: 6, expandedX: -20, expandedY: 5 }
+								{ text: 'Environmental', filterable: [], x: 935, y: 838, fontSize: 6, expandedX: -20, expandedY: 5 },
+								{ text: 'Protection', filterable: [], x: 935, y: 844, fontSize: 6, expandedX: -20, expandedY: 5 },
+								{ text: 'Measures', filterable: [], x: 935, y: 850, fontSize: 6, expandedX: -20, expandedY: 5 }
 							],
 							[
-								{ text: 'Transport', filterable: [], x: 932, y: 865, fontSize: 6, expandedX: -80, expandedY: -35 },
-								{ text: 'networks', filterable: [], x: 932, y: 871, fontSize: 6, expandedX: -80, expandedY: -31 }
+								{ text: 'Healthcare', filterable: [], x: 930, y: 864, fontSize: 6, expandedX: -80, expandedY: -35 },
+								{ text: 'System Quality', filterable: [], x: 922, y: 870, fontSize: 6, expandedX: -80, expandedY: -31 }
 							],
 							[
-								{ text: 'Road condition', filterable: [], x: 915, y: 890, fontSize: 6, expandedX: -10, expandedY: -10 },
-								{ text: 'monitoring', filterable: [], x: 915, y: 896, fontSize: 6, expandedX: -10, expandedY: -6 }
+								{ text: 'Public Health', filterable: [], x: 915, y: 882, fontSize: 6, expandedX: -10, expandedY: -10 },
+								{ text: 'Coverage', filterable: [], x: 915, y: 888, fontSize: 6, expandedX: -10, expandedY: -6 }
+							],
+							[
+								{ text: 'Road Condition', filterable: [], x: 910, y: 900, fontSize: 6, expandedX: -10, expandedY: -10 },
+								{ text: 'Monitoring', filterable: [], x: 915, y: 906, fontSize: 6, expandedX: -10, expandedY: -6 }
 							]
 						]
 					],
@@ -982,30 +1223,31 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						5,
 						[
 							[
-								{ text: 'National air quality', filterable: [], x: 995, y: 800, fontSize: 5, expandedX: -115, expandedY: 2 },
-								{ text: 'improvement', filterable: [], x: 995, y: 805, fontSize: 5, expandedX: -115, expandedY: 6 },
-								{ text: 'measures', filterable: [], x: 995, y: 810, fontSize: 5, expandedX: -115, expandedY: 10 }
+								{ text: 'Environmental', filterable: [], x: 995, y: 800, fontSize: 5, expandedX: -115, expandedY: 2 },
+								{ text: 'Policy', filterable: [], x: 995, y: 805, fontSize: 5, expandedX: -115, expandedY: 6 },
+								{ text: 'Framework', filterable: [], x: 995, y: 810, fontSize: 5, expandedX: -115, expandedY: 10 }
 							],
 							[
-								{ text: 'Sustainable livestock', filterable: [], x: 990, y: 825, fontSize: 5, expandedX: -70, expandedY: 65 },
-								{ text: 'management', filterable: [], x: 990, y: 830, fontSize: 5, expandedX: -70, expandedY: 69 },
-								{ text: 'policies', filterable: [], x: 990, y: 835, fontSize: 5, expandedX: -70, expandedY: 73 }
+								{ text: 'Sustainable', filterable: [], x: 995, y: 825, fontSize: 5, expandedX: -70, expandedY: 65 },
+								{ text: 'livestock', filterable: [], x: 995, y: 830, fontSize: 5, expandedX: -70, expandedY: 69 },
+								{ text: 'management', filterable: [], x: 995, y: 835, fontSize: 5, expandedX: -70, expandedY: 69 },
+								{ text: 'policies', filterable: [], x: 995, y: 840, fontSize: 5, expandedX: -70, expandedY: 73 }
 							],
 							[
-								{ text: 'Climate change', filterable: [], x: 985, y: 850, fontSize: 5, expandedX: -45, expandedY: 10 },
-								{ text: 'adaptation policies', filterable: [], x: 985, y: 855, fontSize: 5, expandedX: -45, expandedY: 14 }
+								{ text: 'Climate change', filterable: [], x: 985, y: 860, fontSize: 5, expandedX: -45, expandedY: 10 },
+								{ text: 'adaptation policies', filterable: [], x: 980, y: 865, fontSize: 5, expandedX: -45, expandedY: 14 }
 							],
 							[
-								{ text: 'Expansion of', filterable: [], x: 975, y: 880, fontSize: 5, expandedX: -20, expandedY: -65 },
-								{ text: 'renewable energy', filterable: [], x: 975, y: 885, fontSize: 5, expandedX: -20, expandedY: -61 }
+								{ text: 'National Health', filterable: [], x: 975, y: 880, fontSize: 5, expandedX: -20, expandedY: -65 },
+								{ text: 'Infrastructure', filterable: [], x: 975, y: 885, fontSize: 5, expandedX: -20, expandedY: -61 }
 							],
 							[
 								{ text: 'Хүн амын', filterable: [], x: 965, y: 900, fontSize: 5, expandedX: -20, expandedY: 25 },
 								{ text: 'нягтрал', filterable: [], x: 965, y: 905, fontSize: 5, expandedX: -20, expandedY: 29 }
 							],
 							[
-								{ text: 'Safe and Sustainable Road', filterable: [], x: 942, y: 925, fontSize: 5, expandedX: -75, expandedY: -85 },
-								{ text: 'Infrastructure', filterable: [], x: 942, y: 930, fontSize: 5, expandedX: -75, expandedY: -80 },
+								{ text: 'Safe and Sustainable', filterable: [], x: 942, y: 925, fontSize: 5, expandedX: -75, expandedY: -85 },
+								{ text: 'Road Infrastructure', filterable: [], x: 942, y: 930, fontSize: 5, expandedX: -75, expandedY: -80 },
 								{ text: 'Development', filterable: [], x: 942, y: 935, fontSize: 5, expandedX: -75, expandedY: -75 }
 							]
 						]
@@ -1019,8 +1261,12 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ text: 'Transportation', filterable: [], x: 1275, y: 801, fontSize: 6, expandedX: -90, expandedY: 20 },
-								{ text: 'problems', filterable: [], x: 1275, y: 807, fontSize: 6, expandedX: -90, expandedY: 24 }
+								{ text: 'Poor Air Quality', filterable: [], x: 1275, y: 796, fontSize: 5, expandedX: -90, expandedY: 20 },
+								{ text: 'Exposure', filterable: [], x: 1275, y: 801, fontSize: 5, expandedX: -90, expandedY: 24 }
+							],
+							[
+								{ text: 'Access', filterable: [], x: 1280, y: 808, fontSize: 5, expandedX: -90, expandedY: 20 },
+								{ text: 'Difficulties', filterable: [], x: 1278, y: 813, fontSize: 5, expandedX: -90, expandedY: 24 }
 							]
 						]
 					],
@@ -1028,12 +1274,8 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						2,
 						[
 							[
-								{ text: 'Poor', filterable: [], x: 1230, y: 805, fontSize: 7, expandedX: -56, expandedY: 5 },
-								{ text: 'conditions', filterable: [], x: 1230, y: 812, fontSize: 7, expandedX: -56, expandedY: 9 }
-							],
-							[
-								{ text: 'Resource', filterable: [], x: 1240, y: 828, fontSize: 7, expandedX: -70, expandedY: 30 },
-								{ text: 'inefficiency', filterable: [], x: 1240, y: 835, fontSize: 7, expandedX: -70, expandedY: 34 }
+								{ text: 'Poor', filterable: [], x: 1235, y: 815, fontSize: 7, expandedX: -56, expandedY: 5 },
+								{ text: 'conditions', filterable: [], x: 1235, y: 822, fontSize: 7, expandedX: -56, expandedY: 9 }
 							]
 						]
 					],
@@ -1041,21 +1283,64 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						3,
 						[
 							[
-								{ text: 'Air quality', filterable: [], x: 1188, y: 840, fontSize: 7, fontWeight: 600, expandedX: -30, expandedY: -10 },
-								{ text: 'deterioration', filterable: [], x: 1188, y: 847, fontSize: 7, fontWeight: 600, expandedX: -30, expandedY: -6 }
+								{ text: 'Access', filterable: [], x: 1180, y: 800, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'inequalities', filterable: [], x: 1180, y: 806, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							],
+							[
+								{ text: 'Monitoring', filterable: [], x: 1180, y: 820, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'Failures', filterable: [], x: 1180, y: 827, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							],
+							[
+								{ text: 'System', filterable: [], x: 1190, y: 840, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'Failures', filterable: [], x: 1190, y: 847, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							],
+							[
+								{ text: 'Facility', filterable: [], x: 1200, y: 860, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'Shortages', filterable: [], x: 1200, y: 867, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
 							]
 						]
 					],
 					[
 						4,
-						[]
+						[
+							[
+								{ text: 'Adaptation', filterable: [], x: 1130, y: 800, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'Failures', filterable: [], x: 1135, y: 806, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							],
+							[
+								{ text: 'Pastureland', filterable: [], x: 1130, y: 820, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'degradation', filterable: [], x: 1130, y: 826, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 },
+								{ text: 'factors', filterable: [], x: 1135, y: 832, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							],
+							[
+								{ text: 'Protection', filterable: [], x: 1135, y: 845, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'Failures', filterable: [], x: 1140, y: 851, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							],
+							[
+								{ text: 'System', filterable: [], x: 1150, y: 865, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'Inadequacies', filterable: [], x: 1145, y: 871, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							],
+							[
+								{ text: 'Regional', filterable: [], x: 1160, y: 895, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -10 },
+								{ text: 'Development', filterable: [], x: 1160, y: 901, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 },
+								{ text: 'Gaps', filterable: [], x: 1168, y: 907, fontSize: 6, fontWeight: 600, expandedX: -30, expandedY: -6 }
+							]
+						]
 					],
 					[
 						5,
 						[
 							[
-								{ "text": "Environmental", "filterable": [], "x": 1077, "y": 835, "fontSize": 7, expandedX: 10, expandedY: -10 },
-								{ "text": "hazards", "filterable": [], "x": 1085, "y": 842, "fontSize": 7, expandedX: 10, expandedY: -6 }
+								{ "text": "Environmental", "filterable": [], "x": 1077, "y": 810, "fontSize": 6, expandedX: 10, expandedY: -10 },
+								{ "text": "degradation", "filterable": [], "x": 1080, "y": 816, "fontSize": 6, expandedX: 10, expandedY: -6 }
+							],
+							[
+								{ "text": "Environmental", "filterable": [], "x": 1080, "y": 840, "fontSize": 6, expandedX: 10, expandedY: -10 },
+								{ "text": "Hazards", "filterable": [], "x": 1090, "y": 846, "fontSize": 6, expandedX: 10, expandedY: -6 }
+							],
+							[
+								{ "text": "Infrastructure", "filterable": [], "x": 1090, "y": 875, "fontSize": 6, expandedX: 10, expandedY: -10 },
+								{ "text": "Deficits", "filterable": [], "x": 1095, "y": 881, "fontSize": 6, expandedX: 10, expandedY: -6 }
 							],
 							[
 								{ "text": "Accident", "filterable": [], "x": 1115, "y": 910, "fontSize": 7, expandedX: 20, expandedY: -20 },
@@ -1077,17 +1362,8 @@ export const data: Map<Section, Map<'center' | 'self', Map<1 | 2 | 3 | 4 | 5, It
 						1,
 						[
 							[
-								{ "text": "Access to", "filterable": [], "x": 815, "y": 765, "fontSize": 4, expandedX: 65, expandedY: -44 },
-								{ "text": "preventive", "filterable": [], "x": 815, "y": 769, "fontSize": 4, expandedX: 65, expandedY: -39 },
-								{ "text": "healthcare", "filterable": [], "x": 815, "y": 773, "fontSize": 4, expandedX: 65, expandedY: -34 }
-							],
-							[
-								{ "text": "Basic needs", "filterable": [], "x": 818, "y": 782, "fontSize": 4, expandedX: 70, expandedY: -15 },
-								{ "text": "accessibility", "filterable": [], "x": 818, "y": 786, "fontSize": 4, expandedX: 70, expandedY: -10 }
-							],
-							[
-								{ "text": "Food", "filterable": [], "x": 803, "y": 783, "fontSize": 4, expandedX: 25, expandedY: -15 },
-								{ "text": "quality", "filterable": [], "x": 803, "y": 787, "fontSize": 4, expandedX: 25, expandedY: -10 }
+								{ "text": "Personal", "filterable": [], "x": 805, "y": 782, "fontSize": 5, expandedX: 25, expandedY: -15 },
+								{ "text": "Health Habits", "filterable": [], "x": 805, "y": 787, "fontSize": 5, expandedX: 25, expandedY: -10 }
 							]
 						]
 					],
