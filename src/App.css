@@ -81,3 +81,7 @@ text {
 .row-yellow {
   background-color: #FFA50080;
 }
+
+text {
+  user-select: none;
+}

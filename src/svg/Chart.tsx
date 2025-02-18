@@ -145,42 +145,14 @@ const Chart = ({ filter, selectedLevel, onLevelChange }: Props) => {
 			{/*<rect width="1578" height="1578" x={1} y={1} stroke='black' strokeWidth={1} fill='none'/>*/}
 			<rect className='rotate' width={760} height={760} x={410} y={410} stroke='black' strokeWidth={3} fill='none'/>
 
-			<rect className='rotate' width={380} height={380} x={600} y={335} fill='red' fillOpacity={.5}/>
-			<rect className='rotate' width={380} height={380} x={335} y={600} fill='#8282d8' fillOpacity={.5}/>
-			<rect className='rotate' width={380} height={380} x={865} y={600} fill='#8dce8d' fillOpacity={.5}/>
-			<rect className='rotate' width={380} height={380} x={600} y={865} fill='orange' fillOpacity={.5}/>
+			<rect className='rotate' width={380} height={380} x={600} y={335} fill='#FFDADA'/>
+			<rect className='rotate' width={380} height={380} x={335} y={600} fill='#DADAFF'/>
+			<rect className='rotate' width={380} height={380} x={865} y={600} fill='#DAFFDA'/>
+			<rect className='rotate' width={380} height={380} x={600} y={865} fill='#FFFFDA'/>
 			<line x1="250" y1="790" x2="1330" y2="790" stroke="black" strokeWidth={2}/>
 			<line x1="790" y1="250" x2="790" y2="1330" stroke="black" strokeWidth={2}/>
 
 			{renderTexts()}
-
-			<g>
-				<text x="600" y="520" fontSize={8} fontWeight={600} {...getProps('Inflation')}>Political influence</text>
-				<text x="600" y="528" fontSize={8} fontWeight={600} {...getProps('Inflation')}>disproportionality</text>
-			</g>
-
-
-
-			{/** MIDDLE TEXT */}
-			<g>
-				<text textAnchor='middle' x="940" y="530" fontSize={8} fontWeight={600} {...getProps('Inflation')}>Амжиргааны түвшний</text>
-				<text textAnchor='middle' x="940" y="537" fontSize={8} fontWeight={600} {...getProps('Inflation')}>өсөлт</text>
-			</g>
-
-
-			{/** MIDDLE TEXT */}
-			<g>
-				<text textAnchor='middle' x="630" y="1030" fontSize={8} fontWeight={600}>Weak implementation</text>
-				<text textAnchor='middle' x="630" y="1038" fontSize={8} fontWeight={600}>and control</text>
-			</g>
-			<g>
-				<text textAnchor='middle' x="630" y="1080" fontSize={8} fontWeight={600}>Judicial system</text>
-				<text textAnchor='middle' x="630" y="1088" fontSize={8} fontWeight={600}>corruption</text>
-			</g>
-			<g>
-				<text textAnchor='middle' x="745" y="1055" fontSize={8} fontWeight={600}>Crisis management</text>
-				<text textAnchor='middle' x="745" y="1063" fontSize={8} fontWeight={600}>Systems</text>
-			</g>
 
 			<g>
 				<text x="800" y="815" fontSize={20} fontWeight={600} transform={getLevelLabelTransform(1)}>I</text>
