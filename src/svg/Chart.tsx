@@ -28,19 +28,19 @@ const levelCircleProps: SVGProps<SVGCircleElement> = {
 const Chart = ({ filter, selectedLevel, onLevelChange }: Props) => {
 
 
-	const getProps = (type: FilterValueType): Partial<SVGProps<SVGTextElement>> => {
-		if (!filter) {
-			return {  };
-		}
-		if (type === filter) {
-			return {
-				fill: '#07ad44'
-			}
-		}
-		return {
-
-		}
-	}
+	// const getProps = (type: FilterValueType): Partial<SVGProps<SVGTextElement>> => {
+	// 	if (!filter) {
+	// 		return {  };
+	// 	}
+	// 	if (type === filter) {
+	// 		return {
+	// 			fill: '#07ad44'
+	// 		}
+	// 	}
+	// 	return {
+	//
+	// 	}
+	// }
 
 	const handleLevelChange = (value: typeof selectedLevel) => {
 		if (selectedLevel === value) {
