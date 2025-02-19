@@ -12,12 +12,16 @@
 
 }
 
-.select {
-  width: 200px !important;
+.filter {
   position: fixed !important;
   top: 1rem;
   left: 1rem;
   background: #fff;
+  display: flex;
+  gap: 0.5rem;
+  > div {
+    width: 200px !important;
+  }
 }
 
 .selected {
@@ -84,4 +88,77 @@ text {
 
 text {
   user-select: none;
+}
+
+* {
+  font-family: "Robot", sans-serif;
+}
+
+.input-row {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.input {
+  border-radius: 6px;
+  height: 25px;
+  border: 1px solid lightgray;
+  width: 250px;
+  flex: 1;
+}
+
+.submit {
+  margin-right: 50px;
+  border-radius: 6px;
+  background: #82c91e;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.chip {
+  border-radius: 16px;
+  cursor: pointer;
+  color: white;
+  white-space: none;
+  word-break: keep-all;
+  background: #ff8622;
+  user-select: none;
+  padding: 4px 15px;
+  font-size: 13px;
+  &.selected-chip {
+    background-color: #82c91e;
+  }
+}
+
+h3 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+h4 {
+  margin-top: 5px;
+}
+
+h5 {
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.create {
+  background: #82c91e;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  padding: 10px;
+  cursor: pointer;
 }

@@ -2,7 +2,7 @@
 
 import type { FilterValueType } from '../types';
 
-enum Section {
+export enum Section {
 	STATE = 1,
 	SOCIAL = 2,
 	EDU = 3,
